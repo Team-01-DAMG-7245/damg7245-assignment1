@@ -1,0 +1,35 @@
+Available Information
+The Company’s Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and amendments to reports filed pursuant to
+Sections 13(a) and 15(d) of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), are filed with the U.S. Securities and Exchange
+Commission (the “SEC”). Such reports and other information filed by the Company with the SEC are available free of charge at investor.apple.com/investor-
+relations/sec-filings/default.aspx when such reports are available on the SEC’s website. The Company periodically provides certain information for investors on
+its corporate website, www.apple.com, and its investor relations website, investor.apple.com. This includes press releases and other information about financial
+performance, information on environmental, social and governance matters, and details related to the Company’s annual meeting of shareholders. The
+information contained on the websites referenced in this Form 10-K is not incorporated by reference into this filing. Further, the Company’s references to website
+URLs are intended to be inactive textual references only.
+Item 1A. Risk Factors
+The Company’s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known
+or unknown, including those described below. When any one or more of these risks materialize from time to time, the Company’s business, reputation, results of
+operations, financial condition and stock price can be materially and adversely affected.
+Because of the following factors, as well as other factors affecting the Company’s results of operations and financial condition, past financial performance should
+not be considered to be a reliable indicator of future performance, and investors should not use historical trends to anticipate results or trends in future periods.
+This discussion of risk factors contains forward-looking statements.
+This section should be read in conjunction with Part II, Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and the
+consolidated financial statements and accompanying notes in Part II, Item 8, “Financial Statements and Supplementary Data” of this Form 10-K.
+Macroeconomic and Industry Risks
+The Company’s operations and performance depend significantly on global and regional economic conditions and adverse economic conditions can
+materially adversely affect the Company’s business, results of operations and financial condition.
+The Company has international operations with sales outside the U.S. representing a majority of the Company’s total net sales. In addition, the Company’s
+global supply chain is large and complex and a majority of the Company’s supplier facilities, including manufacturing and assembly sites, are located outside the
+U.S. As a result, the Company’s operations and performance depend significantly on global and regional economic conditions.
+Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency
+fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company’s products and services. In
+addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility,
+declines in income or asset values, and other economic factors.
+In addition to an adverse impact on demand for the Company’s products and services, uncertainty about, or a decline in, global or regional economic conditions
+can have a significant impact on the Company’s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel
+partners, and developers. Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.
+Adverse economic conditions can also lead to increased credit and collectibility risk on the Company’s trade receivables; the failure of derivative counterparties
+and other financial institutions; limitations on the Company’s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company’s financial
+instruments. These and other impacts can materially adversely affect the Company’s business, results of operations, financial condition and stock price.
+Apple Inc. | 2024 Form 10-K | 5

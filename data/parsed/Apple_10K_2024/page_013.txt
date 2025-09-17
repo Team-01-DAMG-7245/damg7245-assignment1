@@ -1,0 +1,43 @@
+The Company’s future performance depends in part on support from third-party software developers.
+The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and
+services. There can be no assurance third-party developers will continue to develop and maintain software applications and services for the Company’s
+products. If third-party software applications and services cease to be developed and maintained for the Company’s products, customers may choose not to buy
+the Company’s products.
+The Company believes the availability of third-party software applications and services for its products depends in part on the developers’ perception and
+analysis of the relative benefits of developing, maintaining and upgrading such software and services for the Company’s products compared to competitors’
+platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.
+This analysis may be based on factors such as the market position of the Company and its products, the anticipated revenue that may be generated, expected
+future growth of product sales, and the costs of developing such applications and services.
+The Company’s minority market share in the global smartphone, personal computer and tablet markets can make developers less inclined to develop or upgrade
+software for the Company’s products and more inclined to devote their resources to developing and upgrading software for competitors’ products with larger
+market share. When developers focus their efforts on these competing platforms, the availability and quality of applications for the Company’s devices can suffer.
+The Company relies on the continued availability and development of compelling and innovative software applications for its products. The Company’s products
+and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of
+change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in
+dissatisfied customers and lower customer demand for the Company’s products.
+The Company distributes third-party applications for its products through the App Store. For the vast majority of applications, developers keep all of the revenue
+they generate on the App Store. Where applicable, the Company retains a commission from sales of applications and sales of digital services or goods initiated
+within an application. From time to time, the Company has made changes to its products and services, including taking actions in response to litigation,
+competition, market conditions and legal and regulatory requirements, and expects to make further business changes in the future. For example, in the U.S., the
+Company has implemented changes to how developers communicate with consumers within apps on the U.S. storefront of the iOS and iPadOS App Store
+regarding alternative purchasing mechanisms. The Company has also implemented changes to iOS, iPadOS, the App Store and Safari® in the European Union
+(“EU”) as it seeks to comply with the Digital Markets Act (the “DMA”), including new business terms and alternative fee structures for iOS and iPadOS apps,
+alternative methods of distribution for iOS and iPadOS apps, alternative payment processing for apps across the Company’s operating systems, and additional
+tools and application programming interfaces (“APIs”) for developers. Changes to the Company’s products and services could materially adversely affect the
+Company’s business, results of operations and financial condition, including if such business changes result in reduced App Store or other sales, reductions in
+the rate of the commission that the Company retains on such sales, or if the rate of the commission is otherwise narrowed in scope or eliminated.
+Failure to obtain or create digital content that appeals to the Company’s customers, or to make such content available on commercially reasonable
+terms, could have a material adverse impact on the Company’s business, results of operations and financial condition.
+The Company contracts with numerous third parties to offer their digital content to customers. This includes the right to sell, or offer subscriptions to, third-party
+content, as well as the right to incorporate specific content into the Company’s own services. The licensing or other distribution arrangements for this content can
+be for relatively short time periods and do not guarantee the continuation or renewal of these arrangements on commercially reasonable terms, or at all. Some
+third-party content providers and distributors currently or in the future may offer competing products and services, and can take actions to make it difficult or
+impossible for the Company to license or otherwise distribute their content. Other content owners, providers or distributors may seek to limit the Company’s
+access to, or increase the cost of, such content. The Company may be unable to continue to offer a wide variety of content at commercially reasonable prices
+with acceptable usage rules.
+The Company also produces its own digital content, which can be costly to produce due to intense and increasing competition for talent, content and
+subscribers, and may fail to appeal to the Company’s customers.
+Some third-party digital content providers require the Company to provide digital rights management and other security solutions. If requirements change, the
+Company may have to develop or license new technology to provide these solutions. There can be no assurance the Company will be able to develop or license
+such solutions at a reasonable cost and in a timely manner.
+Apple Inc. | 2024 Form 10-K | 10
