@@ -1,0 +1,31 @@
+Note 7 – Income Taxes
+Provision for Income Taxes and Effective Tax Rate
+The provision for income taxes for 2023, 2022 and 2021, consisted of the following (in millions):
+2023 2022 2021
+Federal:
+Current $ 9,445 $ 7,890 $ 8,257
+Deferred (3,644) (2,265) (7,176)
+Total 5,801 5,625 1,081
+State:
+Current 1,570 1,519 1,620
+Deferred (49) 84 (338)
+Total 1,521 1,603 1,282
+Foreign:
+Current 8,750 8,996 9,424
+Deferred 669 3,076 2,740
+Total 9,419 12,072 12,164
+Provision for income taxes $ 16,741 $ 19,300 $ 14,527
+The foreign provision for income taxes is based on foreign pretax earnings of $72.9 billion, $71.3 billion and $68.7 billion in 2023, 2022 and 2021, respectively.
+A reconciliation of the provision for income taxes to the amount computed by applying the statutory federal income tax rate (21% in 2023, 2022 and 2021) to
+income before provision for income taxes for 2023, 2022 and 2021, is as follows (dollars in millions):
+2023 2022 2021
+Computed expected tax $ 23,885 $ 25,012 $ 22,933
+State taxes, net of federal effect 1,124 1,518 1,151
+Earnings of foreign subsidiaries (5,744) (4,366) (4,715)
+Research and development credit, net (1,212) (1,153) (1,033)
+Excess tax benefits from equity awards (1,120) (1,871) (2,137)
+Foreign-derived intangible income deduction — (296) (1,372)
+Other (192) 456 (300)
+Provision for income taxes $ 16,741 $ 19,300 $ 14,527
+Effective tax rate 14.7 % 16.2 % 13.3 %
+Apple Inc. | 2023 Form 10-K | 40

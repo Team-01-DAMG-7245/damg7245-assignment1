@@ -1,0 +1,34 @@
+Net sales disaggregated by significant products and services for 2023, 2022 and 2021 were as follows (in millions):
+2023 2022 2021
+iPhone (1) $ 200,583 $ 205,489 $ 191,973
+Mac (1) 29,357 40,177 35,190
+iPad (1) 28,300 29,292 31,862
+Wearables, Home and Accessories (1) 39,845 41,241 38,367
+Services (2) 85,200 78,129 68,425
+Total net sales $ 383,285 $ 394,328 $ 365,817
+(1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective
+product.
+(2) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products.
+Total net sales include $8.2 billion of revenue recognized in 2023 that was included in deferred revenue as of September 24, 2022, $7.5 billion of revenue
+recognized in 2022 that was included in deferred revenue as of September 25, 2021, and $6.7 billion of revenue recognized in 2021 that was included in
+deferred revenue as of September 26, 2020.
+The Company’s proportion of net sales by disaggregated revenue source was generally consistent for each reportable segment in Note 13, “Segment
+Information and Geographic Data” for 2023, 2022 and 2021, except in Greater China, where iPhone revenue represented a moderately higher proportion of net
+sales.
+As of September 30, 2023 and September 24, 2022, the Company had total deferred revenue of $12.1 billion and $12.4 billion, respectively. As of September 30,
+2023, the Company expects 67% of total deferred revenue to be realized in less than a year, 25% within one-to-two years, 7% within two-to-three years and 1%
+in greater than three years.
+Note 3 – Earnings Per Share
+The following table shows the computation of basic and diluted earnings per share for 2023, 2022 and 2021 (net income in millions and shares in thousands):
+2023 2022 2021
+Numerator:
+Net income $ 96,995 $ 99,803 $ 94,680
+Denominator:
+Weighted-average basic shares outstanding 15,744,231 16,215,963 16,701,272
+Effect of dilutive share-based awards 68,316 109,856 163,647
+Weighted-average diluted shares 15,812,547 16,325,819 16,864,919
+Basic earnings per share $ 6.16 $ 6.15 $ 5.67
+Diluted earnings per share $ 6.13 $ 6.11 $ 5.61
+Approximately 24 million restricted stock units (“RSUs”) were excluded from the computation of diluted earnings per share for 2023 because their effect would
+have been antidilutive.
+Apple Inc. | 2023 Form 10-K | 35

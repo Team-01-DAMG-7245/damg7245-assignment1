@@ -1,0 +1,13 @@
+{
+  "processed_pdfs": [
+    "Apple_10K_2023.pdf",
+    "Apple_10K_2024.pdf"
+  ],
+  "ocr_pages_by_pdf": {
+    "Apple_10K_2023.pdf": [],
+    "Apple_10K_2024.pdf": []
+  },
+  "total_pdfs_processed": 2,
+  "total_pdfs_with_ocr": 0,
+  "total_ocr_pages": 0
+}

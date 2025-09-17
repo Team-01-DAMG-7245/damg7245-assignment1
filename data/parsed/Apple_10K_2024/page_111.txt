@@ -1,0 +1,36 @@
+Restricted Trading Periods and Trading Windows
+A restricted trading period is a specified period of time during which designated Apple personnel, and their covered family members and
+entities, may not buy or sell Apple securities. If you are subject to trading restrictions, you will be notified by Apple’s Corporate Legal team.
+A trading window (sometimes referred to as an “open trading window”) is a specified period of time during which Apple personnel may buy or
+sell Apple securities, so long as the individual is not aware of material nonpublic information. Complying with restricted trading periods and
+trading windows may protect you and Apple from regulatory investigations or insider trading allegations. However, even if you are not subject
+to restricted trading periods or no such period is in effect, you must not trade in Apple securities if you are aware of material nonpublic
+information about Apple.
+The regularly scheduled restricted trading period and trading window for each quarter is indicated below.
+Fiscal Quarter Trading Window Closed and Trading Restrictions End and Trading Window Opens
+Trading Restrictions Begin
+24 hours after public disclosure of first-quarter results (typically early February)
+1st December 1
+24 hours after public disclosure of second-quarter results (typically early May)
+2nd March 1
+24 hours after public disclosure of third-quarter results (typically early August)
+3rd June 1
+24 hours after public disclosure of year-end results (typically early November)
+4th September 1
+In addition to these regularly scheduled restricted trading periods, Apple may impose a special restricted trading period or extend a restricted
+trading period if necessary. If you become subject to a special or extended restricted trading period, you will be notified by Apple’s Corporate
+Legal team. If you are notified about a special or extended restricted trading period, you should not discuss it with others.
+Permitted Transactions
+The transactions listed below are not subject to this policy’s restrictions, including during restricted trading periods and open trading
+windows:
+• Vesting of restricted stock unit awards and the withholding of shares by Apple to satisfy tax-withholding requirements upon
+vesting;
+• Purchases under Apple’s Employee Stock Purchase Plan;
+• Cash-settled stock option exercises under Apple’s equity plans (i.e., cash-settled “exercise and hold” transactions);
+• Transactions pursuant to a previously established contract, plan or instruction to trade in Apple’s securities (a “Trading
+Plan”) entered in accordance with Rule 10b5-1 (“Rule 10b5-1”) under the Securities Exchange Act of 1934, as amended
+(the “Act”), and acknowledged by Apple’s Corporate Legal team; and
+• Bona fide gifts for estate planning purposes, including gifts to a trust, family limited partnership, charitable foundation or
+similar entity, as long as you or members of your immediate family remain the sole beneficiaries of the transferred shares
+and the terms of the transfer ensure that the shares remain subject to the same
+Updated September 2024 4

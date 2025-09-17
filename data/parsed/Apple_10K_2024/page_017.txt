@@ -1,0 +1,44 @@
+Regulatory changes and other actions that materially adversely affect the Company’s business may be announced with little or no advance notice and the
+Company may not be able to effectively mitigate all adverse impacts from such measures. For example, the Company is subject to changing regulations relating
+to the export and import of its products. Although the Company has programs, policies and procedures in place that are designed to satisfy regulatory
+requirements, there can be no assurance that such policies and procedures will be effective in preventing a violation or a claim of a violation. As a result, the
+Company’s products could be banned, delayed or prohibited from importation, which could materially adversely affect the Company’s business, reputation,
+results of operations and financial condition.
+Expectations relating to environmental, social and governance considerations and related reporting obligations expose the Company to potential
+liabilities, increased costs, reputational harm, and other adverse effects on the Company’s business.
+Many governments, regulators, investors, employees, customers and other stakeholders are increasingly focused on environmental, social and governance
+considerations relating to businesses, including climate change and greenhouse gas emissions, human and civil rights, and diversity, equity and inclusion. In
+addition, the Company makes statements about its goals and initiatives through its various non-financial reports, information provided on its website, press
+statements and other communications. Responding to these environmental, social and governance considerations and implementation of the Company’s
+announced goals and initiatives involves risks and uncertainties, requires investments, and depends in part on third-party performance or data that is outside the
+Company’s control. The Company cannot guarantee that it will achieve its announced environmental, social and governance goals and initiatives. In addition,
+some stakeholders may disagree with the Company’s goals and initiatives. Any failure, or perceived failure, by the Company to achieve its goals, further its
+initiatives, adhere to its public statements, comply with federal, state and international environmental, social and governance laws and regulations, or meet
+evolving and varied stakeholder expectations and standards could result in legal and regulatory proceedings against the Company and materially adversely
+affect the Company’s business, reputation, results of operations, financial condition and stock price.
+The technology industry, including, in some instances, the Company, is subject to intense media, political and regulatory scrutiny, which exposes
+the Company to increasing regulation, government investigations, legal actions and penalties.
+From time to time, the Company has made changes to its App Store, including actions taken in response to litigation, competition, market conditions and legal
+and regulatory requirements. The Company expects to make further business changes in the future. For example, in the U.S. the Company has implemented
+changes to how developers communicate with consumers within apps on the U.S. storefront of the iOS and iPadOS App Store regarding alternative purchasing
+mechanisms.
+The Company has also implemented changes to iOS, iPadOS, the App Store and Safari in the EU as it seeks to comply with the DMA, including new business
+terms and alternative fee structures for iOS and iPadOS apps, alternative methods of distribution for iOS and iPadOS apps, alternative payment processing for
+apps across the Company’s operating systems, and additional tools and APIs for developers. The Company has also continued to make changes to its
+compliance plan in response to feedback and engagement with the European Commission (the “Commission”). Although the Company’s compliance plan is
+intended to address the DMA’s obligations, it has been challenged by the Commission and may be challenged further by private litigants. The DMA provides for
+significant fines and penalties for noncompliance, and other jurisdictions may seek to require the Company to make changes to its business. While the changes
+introduced by the Company in the EU are intended to reduce new privacy and security risks that the DMA poses to EU users, many risks will remain.
+The Company is also currently subject to antitrust investigations and litigation in various jurisdictions around the world, which can result in legal proceedings and
+claims against the Company that could, individually or in the aggregate, have a materially adverse impact on the Company’s business, results of operations and
+financial condition. For example, the Company is subject to civil antitrust lawsuits in the U.S. alleging monopolization or attempted monopolization in the markets
+for “performance smartphones” and “smartphones” generally in violation of U.S. antitrust laws. In addition, the Company is the subject of investigations in Europe
+and other jurisdictions relating to App Store terms and conditions. If such investigations or litigation are resolved against the Company, the Company can be
+exposed to significant fines and may be required to make further changes to its business practices, all of which could materially adversely affect the Company’s
+business, reputation, results of operations and financial condition.
+Further, the Company has commercial relationships with other companies in the technology industry that are or may become subject to investigations and
+litigation that, if resolved against those other companies, could materially adversely affect the Company’s commercial relationships with those business partners
+and materially adversely affect the Company’s business, results of operations and financial condition. For example, the Company earns revenue from licensing
+arrangements with Google LLC and other companies to offer their search services on the Company’s platforms and applications, and certain of these
+arrangements are currently subject to government investigations and legal proceedings.
+Apple Inc. | 2024 Form 10-K | 14
