@@ -1,0 +1,38 @@
+Share-Based Compensation
+The following table shows share-based compensation expense and the related income tax benefit included in the Consolidated Statements of Operations for
+2023, 2022 and 2021 (in millions):
+2023 2022 2021
+Share-based compensation expense $ 10,833 $ 9,038 $ 7,906
+Income tax benefit related to share-based compensation expense $ (3,421) $ (4,002) $ (4,056)
+As of September 30, 2023, the total unrecognized compensation cost related to outstanding RSUs was $18.6 billion, which the Company expects to recognize
+over a weighted-average period of 2.5 years.
+Note 12 – Commitments, Contingencies and Supply Concentrations
+Unconditional Purchase Obligations
+The Company has entered into certain off–balance sheet commitments that require the future purchase of goods or services (“unconditional purchase
+obligations”). The Company’s unconditional purchase obligations primarily consist of supplier arrangements, licensed intellectual property and content, and
+distribution rights. Future payments under noncancelable unconditional purchase obligations with a remaining term in excess of one year as of September 30,
+2023, are as follows (in millions):
+2024 $ 4,258
+2025 2,674
+2026 3,434
+2027 1,277
+2028 5,878
+Thereafter 3,215
+Total $ 20,736
+Contingencies
+The Company is subject to various legal proceedings and claims that have arisen in the ordinary course of business and that have not been fully resolved. The
+outcome of litigation is inherently uncertain. In the opinion of management, there was not at least a reasonable possibility the Company may have incurred a
+material loss, or a material loss greater than a recorded accrual, concerning loss contingencies for asserted legal and other claims.
+Concentrations in the Available Sources of Supply of Materials and Product
+Although most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from
+single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers,
+tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times
+subject to industry-wide shortage and significant commodity pricing fluctuations.
+The Company uses some custom components that are not commonly used by its competitors, and new products introduced by the Company often utilize
+custom components available from only one source. When a component or product uses new technologies, initial capacity constraints may exist until the
+suppliers’ yields have matured or their manufacturing capacities have increased. The continued availability of these components at acceptable prices, or at all,
+may be affected if suppliers decide to concentrate on the production of common components instead of components customized to meet the Company’s
+requirements.
+Substantially all of the Company’s hardware products are manufactured by outsourcing partners that are located primarily in China mainland, India, Japan, South
+Korea, Taiwan and Vietnam.
+Apple Inc. | 2023 Form 10-K | 46

@@ -1,0 +1,38 @@
+European Commission State Aid Decision
+On August 30, 2016, the European Commission announced its decision that Ireland granted state aid to the Company by providing tax opinions in 1991 and
+2007 concerning the tax allocation of profits of the Irish branches of two subsidiaries of the Company (the “State Aid Decision”). The State Aid Decision ordered
+Ireland to calculate and recover additional taxes from the Company for the period June 2003 through December 2014. Irish legislative changes, effective as of
+January 2015, eliminated the application of the tax opinions from that date forward. The recovery amount was calculated to be €13.1 billion, plus interest of €1.2
+billion. The Company and Ireland appealed the State Aid Decision to the General Court of the Court of Justice of the European Union (the “General Court”). On
+July 15, 2020, the General Court annulled the State Aid Decision. On September 25, 2020, the European Commission appealed the General Court’s decision to
+the European Court of Justice (the “ECJ”) and a hearing was held on May 23, 2023. A decision from the ECJ is expected in calendar year 2024. The Company
+believes it would be eligible to claim a U.S. foreign tax credit for a portion of any incremental Irish corporate income taxes potentially due related to the State Aid
+Decision.
+On an annual basis, the Company may request approval from the Irish Minister for Finance to reduce the recovery amount for certain taxes paid to other
+countries. As of September 30, 2023, the adjusted recovery amount was €12.7 billion, excluding interest. The adjusted recovery amount plus interest is funded
+into escrow, where it will remain restricted from general use pending the conclusion of all legal proceedings. Refer to the Cash, Cash Equivalents and
+Marketable Securities section of Note 4, “Financial Instruments” for more information.
+Note 8 – Leases
+The Company has lease arrangements for certain equipment and facilities, including corporate, data center, manufacturing and retail space. These leases
+typically have original terms not exceeding 10 years and generally contain multiyear renewal options, some of which are reasonably certain of exercise.
+Payments under the Company’s lease arrangements may be fixed or variable, and variable lease payments are primarily based on purchases of output of the
+underlying leased assets. Lease costs associated with fixed payments on the Company’s operating leases were $2.0 billion, $1.9 billion and $1.7 billion for 2023,
+2022 and 2021, respectively. Lease costs associated with variable payments on the Company’s leases were $13.9 billion, $14.9 billion and $12.9 billion for 2023,
+2022 and 2021, respectively.
+The Company made $1.9 billion, $1.8 billion and $1.4 billion of fixed cash payments related to operating leases in 2023, 2022 and 2021, respectively. Noncash
+activities involving right-of-use (“ROU”) assets obtained in exchange for lease liabilities were $2.1 billion, $2.8 billion and $3.3 billion for 2023, 2022 and 2021,
+respectively.
+The following table shows ROU assets and lease liabilities, and the associated financial statement line items, as of September 30, 2023 and September 24,
+2022 (in millions):
+Lease-Related Assets and Liabilities Financial Statement Line Items 2023 2022
+Right-of-use assets:
+Operating leases Other non-current assets $ 10,661 $ 10,417
+Finance leases Property, plant and equipment, net 1,015 952
+Total right-of-use assets $ 11,676 $ 11,369
+Lease liabilities:
+Operating leases Other current liabilities $ 1,410 $ 1,534
+Other non-current liabilities 10,408 9,936
+Finance leases Other current liabilities 165 129
+Other non-current liabilities 859 812
+Total lease liabilities $ 12,842 $ 12,411
+Apple Inc. | 2023 Form 10-K | 42

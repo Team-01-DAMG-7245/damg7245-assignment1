@@ -1,0 +1,27 @@
+Products and Services Performance
+The following table shows net sales by category for 2023, 2022 and 2021 (dollars in millions):
+2023 Change 2022 Change 2021
+Net sales by category:
+iPhone (1) $ 200,583 (2)% $ 205,489 7 % $ 191,973
+Mac (1) 29,357 (27)% 40,177 14 % 35,190
+iPad (1) 28,300 (3)% 29,292 (8)% 31,862
+Wearables, Home and Accessories (1) 39,845 (3)% 41,241 7 % 38,367
+Services (2) 85,200 9 % 78,129 14 % 68,425
+Total net sales $ 383,285 (3)% $ 394,328 8 % $ 365,817
+(1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective
+product.
+(2) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products.
+iPhone
+iPhone net sales decreased 2% or $4.9 billion during 2023 compared to 2022 due to lower net sales of non-Pro iPhone models, partially offset by higher net
+sales of Pro iPhone models.
+Mac
+Mac net sales decreased 27% or $10.8 billion during 2023 compared to 2022 due primarily to lower net sales of laptops.
+iPad
+iPad net sales decreased 3% or $1.0 billion during 2023 compared to 2022 due primarily to lower net sales of iPad mini and iPad Air, partially offset by the
+combined net sales of iPad 9th and 10th generation.
+Wearables, Home and Accessories
+Wearables, Home and Accessories net sales decreased 3% or $1.4 billion during 2023 compared to 2022 due primarily to lower net sales of Wearables and
+Accessories.
+Services
+Services net sales increased 9% or $7.1 billion during 2023 compared to 2022 due to higher net sales across all lines of business.
+Apple Inc. | 2023 Form 10-K | 22

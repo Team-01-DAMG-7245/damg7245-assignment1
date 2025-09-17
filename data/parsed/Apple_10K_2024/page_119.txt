@@ -1,0 +1,27 @@
+Exhibit 97.1
+Rule 10D-1 Recovery Policy
+A. Introduction
+This Rule 10D-1 Recovery Policy (the “Policy”) is administered by the People and Compensation Committee of the
+Board of Directors of Apple Inc. (the “Committee”), and covers Incentive-Based Compensation granted, awarded or paid
+by Apple Inc. or any of its subsidiaries (“Apple”) to any employee who is an “executive officer” of Apple (each a “Covered
+Executive”) as defined under Section 10D-1 of the Securities and Exchange Act of 1934 (“Exchange Act”). The Policy is
+intended to comply with, and as applicable to be administered and interpreted consistent with, and subject to the
+exceptions set forth in, Listing Rule 5608 adopted by the Nasdaq Stock Market to implement Rule 10D-1 under the
+Exchange Act (collectively referred to herein as “Rule 10D-1”). For avoidance of doubt the Policy only applies to Covered
+Executives who served as a Covered Executive for Apple at any point during the performance period for any Incentive-
+Based Compensation that is Received on or after October 2, 2023. The Policy explains when Apple will be required to
+seek recovery of erroneously awarded Incentive-Based Compensation from a Covered Executive.
+B. Incentive-Based Compensation
+For purposes of this Policy, “Incentive-Based Compensation” means any compensation granted, earned or vested based
+in whole or in part upon the attainment of one or more financial reporting measures, that was Received (i) on or after
+October 2, 2023 and (ii) by a person who served as a Covered Executive at any time during the performance period for
+the Incentive-Based Compensation. Financial reporting measures are (i) any measure(s) that are determined and
+presented in accordance with the accounting principles used in Apple’s financial statements and any measure(s) derived
+in whole or in part from such measure(s) and (ii) any measure(s) that are based in whole or in part on Apple’s stock price
+or total shareholder return. For avoidance of doubt, Incentive-Based Compensation includes awards granted to a
+Covered Executive that are outstanding and unvested as of October 2, 2023. Incentive-Based Compensation is
+“Received” in the fiscal period that the relevant financial reporting measure is attained regardless of when it is paid or
+awarded.
+For avoidance of doubt, incentive-based compensation that is not earned or vested based on the attainment of one or
+more financial measures, including but not limited to time-based restricted stock units, is not covered compensation
+under this Policy but may be recouped under the Apple Inc. Executive Team Compensation Recoupment Policy.
