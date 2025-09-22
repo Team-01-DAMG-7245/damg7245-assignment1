@@ -72,23 +72,29 @@ This extracts per-page text with OCR fallback and word bounding boxes.
 
 Part 2: Table Extraction (Camelot + pdfplumber)
 #### Step 3: Extract Tables with Camelot
+```bash
 python src/extract_tables_camelot.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --out data/parsed/tables/camelot
+```
 Runs both lattice and stream modes and saves extracted tables as CSV files.
 
 #### Step 4: Extract Tables with pdfplumber
+```bash
 python src/extract_tables_pdfplumber.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --out data/parsed/tables/pdfplumber
+```
 Detects tables using line/overlap heuristics and saves them as CSV files.
 
 #### Step 5: Hybrid Extractor
+```bash
 python src/hybrid_tables.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --pages 60-75 \
   --out data/parsed/tables/hybrid \
   --thresh 22
+```
 Automatically chooses lattice when pages have ruling lines and stream otherwise.
 
 #### Step 6: PubLayNet Model
