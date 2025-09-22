@@ -325,3 +325,78 @@ python src/docling_structure_analyzer.py
 3. **Export Manager**: Generates Markdown and JSON outputs
 4. **Comparison Tool**: Analyzes performance vs custom pipeline
 5. **DVC Integrator**: Provides pipeline integration configuration
+
+   
+#### Part 5 — Metadata & Provenance Tagging
+
+Attach provenance metadata to every extracted text/table block and generate section-based Markdown summaries for traceability and citation.
+
+## Overview
+- Define metadata schema for consistent provenance.
+- Emit one JSON record per block to a per-document `.jsonl`.
+- Reassemble sections by grouping records on the section label; write Markdown.
+
+All functionality is in `src/provenance_tagging.py` using Docling JSON (`export_to_dict`).
+
+## Prerequisites
+- Python 3.9+
+- Docling JSON for each PDF in `data/parsed/docling/<PDF_STEM>.json`
+- Optional: PDF path to infer `company`/`fiscal_year` if not provided
+
+## Metadata Schema
+Each JSONL record contains:
+- `doc_id`: Unique document identifier (Docling origin hash if available; else JSON stem)
+- `company`: Company name (e.g., `Apple`)
+- `fiscal_year`: Fiscal year (e.g., `2023`)
+- `page`: 1-based page index
+- `section`: Section label/category (from Docling `label`/`category`; defaults to `unknown`)
+- `block_type`: `text` | `table`
+- `bbox`: Bounding box if present (preserved format)
+- `text`: Content (tables use caption if available)
+- `source_path`: Source URI/path (from Docling origin if present)
+- `table_shape` (tables only): `{ rows, cols }` from Docling `data.grid`
+
+## Usage
+
+### Option A — Provide Docling JSON and metadata
+```bash
+python src/provenance_tagging.py \
+  --docling-json data/parsed/docling/Apple_10K_2023.json \
+  --company Apple \
+  --fiscal-year 2023 \
+  --out data/parsed/docling
+```
+
+### Option B — Infer company/year from the PDF name
+```bash
+python src/provenance_tagging.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --out data/parsed/docling
+```
+This looks for `data/parsed/docling/Apple_10K_2023.json` and infers `company=Apple`, `fiscal_year=2023`.
+
+## Outputs
+- JSONL (per block records): `data/parsed/docling/{Company}_{Year}.jsonl`
+- Section Markdown: `data/parsed/docling/{Company}_{Year}_sections.md`
+
+## How It Works
+- Parses Docling JSON pages and resolves `$ref` to `/texts/{id}` and `/tables/{id}`.
+- Normalizes fields into the schema and writes one line per block to JSONL.
+- Groups by `section` to produce Markdown with:
+  - Section headings
+  - Text content in order
+  - A table listing tables with page, bbox, caption
+
+## Validation Checklist
+- JSONL files exist for each document with the keys in the schema.
+- Markdown summaries exist per document and group content by section.
+
+## Notes
+- Missing section labels default to `unknown`.
+- BBox structure is preserved as emitted by Docling.
+- Table shape is estimated from `data.grid` if present.
+
+## Troubleshooting
+- “Docling JSON not found”: Export Docling JSON to `data/parsed/docling/<PDF_STEM>.json`.
+- Empty sections/unknown labels: Docling may omit labels; grouping falls back to `unknown`.
+- No tables in Markdown: The summary only lists tables present in the JSONL.
