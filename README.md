@@ -97,6 +97,103 @@ python src/layout_detection.py
 - **OCR logs**: `data/parsed/Apple_10K_YYYY/ocr_pages.json`
 - **Processing summary**: `data/parsed/ocr_summary.json`
 
+### Part 2 - Table Extraction (Camelot + pdfplumber)
+
+#### Step 1: Extract Tables with Camelot
+
+python src/extract_tables_camelot.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --out data/parsed/tables/camelot
+Step 2: Extract Tables with pdfplumber
+python src/extract_tables_pdfplumber.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --out data/parsed/tables/pdfplumber
+This detects tables using line and intersection heuristics, saving them as CSV files.
+Step 3: Hybrid Extractor (Auto lattice/stream selection)
+python src/hybrid_tables.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --pages 60-75 \
+  --out data/parsed/tables/hybrid \
+  --thresh 22
+
+Features Implemented
+Camelot (lattice): Uses ruling lines; best for bordered tables and schedules.
+Camelot (stream): Infers columns from text spacing; best for borderless financial statements.
+pdfplumber: Groups text into cells using line-based heuristics; effective on tables with clear grid lines.
+Hybrid approach: Simple rule-based selector that applies lattice on heavily ruled pages and stream on plain-text tables.
+
+Key Outputs
+Camelot CSVs: data/parsed/tables/camelot/Apple_10K_2023_stream_00.csv
+pdfplumber CSVs: data/parsed/tables/pdfplumber/Apple_10K_2023_p065_00.csv
+Hybrid CSVs: data/parsed/tables/hybrid/Apple_10K_2023_p065_stream_00.csv
+
+
+Observations
+Borderless statements (e.g., Income Statement, Balance Sheet, Cash Flows) were extracted most cleanly with Camelot stream.
+Bordered/ruled tables (e.g., detailed schedules) were best handled by Camelot lattice or pdfplumber.
+Hybrid mode automated method selection, reducing manual trial and error.
+Final selected CSV contained properly aligned year columns and intact row labels for downstream analysis.
+
+#Table Extraction Comparison
+
+## Document & Scope
+- **Filings analyzed:** Apple 10-K (2023, 2024)
+- **Target pages:** Consolidated Income Statement, Balance Sheet, and Cash Flows
+
+---
+
+## Methods Compared
+1. **Camelot (Stream mode)**
+   - Groups text spans to infer columns.
+   - Works best for **borderless tables** common in financial statements.
+
+2. **Camelot (Lattice mode)**
+   - Relies on ruling lines and grid borders.
+   - Works best for **bordered schedules or supporting tables**.
+
+3. **pdfplumber (Table detection)**
+   - Uses line intersection and grouping heuristics.
+   - Performs well when **clear lines exist**, but often mis-detects large, borderless statements.
+
+---
+
+## Results
+
+- **Camelot Stream**
+  - Successfully preserved **row labels** and **aligned year columns** for Income Statement and Balance Sheet.
+  - Minimal cleanup required; numeric columns extracted consistently.
+  - Best suited for the main financial statements which lack visible borders.
+
+- **Camelot Lattice**
+  - Worked on smaller tables with visible ruling lines.
+  - On borderless statements, it over-split multi-line labels and sometimes produced empty or fragmented cells.
+
+- **pdfplumber**
+  - Detected line-based tables (e.g., note schedules) reliably.
+  - On borderless statements, often returned large narrative blocks instead of structured rows/columns.
+
+---
+
+## Key Example
+- **Income Statement (page ~65)**  
+  - Stream mode produced a clean CSV: `data/parsed/tables/camelot/Apple_10K_2023_p065_stream_00.csv`  
+  - Row labels (e.g., Net Sales, Operating Income, Net Income) were intact.  
+  - Year columns (2021, 2022, 2023) aligned properly.  
+  - Lattice mis-detected rows, and pdfplumber treated the page as plain text.
+
+---
+
+## Conclusion
+- **Best method:** Camelot **Stream mode** for borderless statements.  
+- **Supporting methods:** Camelot **Lattice** and pdfplumber are useful for **bordered tables and schedules**.  
+- **Hybrid strategy:** Using line-count thresholding to switch between lattice (bordered) and stream (borderless) provided the most robust coverage.  
+
+Final selected CSVs (clean outputs for downstream analysis):
+- Income Statement → Camelot Stream  
+- Balance Sheet → Camelot Stream  
+- Cash Flows → Camelot Stream  
+
+
 
 ### Part 3 - Layout Detection
 - **LayoutParser Integration**: Uses PubLayNet model with PPYOLOv2 architecture
