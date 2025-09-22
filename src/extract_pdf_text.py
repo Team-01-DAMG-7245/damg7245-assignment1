@@ -1,8 +1,3 @@
-"""
-PDF Text Extraction - DAMG7245 Assignment 1 Part 1
-Extract per-page text from PDFs using pdfplumber with OCR fallback
-"""
-
 import pdfplumber
 import pytesseract
 from pathlib import Path
