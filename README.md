@@ -70,12 +70,33 @@ python src/extract_pdf_text.py
 ```
 This extracts per-page text with OCR fallback and word bounding boxes.
 
-#### Step ?: PubLayNet Model
+Part 2: Table Extraction (Camelot + pdfplumber)
+#### Step 3: Extract Tables with Camelot
+python src/extract_tables_camelot.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --out data/parsed/tables/camelot
+Runs both lattice and stream modes and saves extracted tables as CSV files.
+
+#### Step 4: Extract Tables with pdfplumber
+python src/extract_tables_pdfplumber.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --out data/parsed/tables/pdfplumber
+Detects tables using line/overlap heuristics and saves them as CSV files.
+
+#### Step 5: Hybrid Extractor
+python src/hybrid_tables.py \
+  --pdf data/raw/Apple_10K_2023.pdf \
+  --pages 60-75 \
+  --out data/parsed/tables/hybrid \
+  --thresh 22
+Automatically chooses lattice when pages have ruling lines and stream otherwise.
+
+#### Step 6: PubLayNet Model
 In order to run PubLayNet model, please manually download the model_.pth and config.yml file from:
 https://huggingface.co/nlpconnect/PubLayNet-faster_rcnn_R_50_FPN_3x/tree/d4cebcc544ac0c9899748e1023e2f3ccda8ca70e
 Store them in a folder called 'publaynet-model' before running the 'layout_detection.py'
 
-#### Step ?: Extract Layout
+#### Step 7: Extract Layout
 ```
 python src/layout_detection.py
 ```
@@ -104,12 +125,14 @@ python src/layout_detection.py
 python src/extract_tables_camelot.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --out data/parsed/tables/camelot
-Step 2: Extract Tables with pdfplumber
+  
+#### Step 2: Extract Tables with pdfplumber
 python src/extract_tables_pdfplumber.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --out data/parsed/tables/pdfplumber
 This detects tables using line and intersection heuristics, saving them as CSV files.
-Step 3: Hybrid Extractor (Auto lattice/stream selection)
+
+#### Step 3: Hybrid Extractor (Auto lattice/stream selection)
 python src/hybrid_tables.py \
   --pdf data/raw/Apple_10K_2023.pdf \
   --pages 60-75 \
