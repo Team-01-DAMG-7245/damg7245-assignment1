@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   download:
-    cmd: python src/SEC_filings.py
+    cmd: python3 src/SEC_filings.py
     deps:
     - path: src/SEC_filings.py
       hash: md5
