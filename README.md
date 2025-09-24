@@ -423,7 +423,99 @@ python src/format_converter.py
 Use Markdown as primary format - ideal for RAG applications as it preserves semantic structure while being LLM-friendly.
 
 ### Part 7
-### Part 8
+
+### Part 8 — Staging pipeline & versioning with DVC
+
+Make the project reproducible and version both code and data.
+
+## Overview
+- Install and initialize DVC.
+- Define stages in `dvc.yaml`.
+- Reproduce the pipeline with caching.
+- Commit `dvc.lock` and `.dvc`/`*.dvc` to preserve lineage.
+- CI: GitHub Actions runs a DVC smoke test.
+
+## Quick Start
+From repo root:
+
+1) Create venv and install DVC
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install "dvc[ssh]"
+dvc --version
+```
+
+2) Initialize DVC (skip if already initialized)
+```bash
+dvc init
+git add .dvc .dvcignore
+git commit -m "Initialize DVC"
+```
+
+3) Configure a default DVC remote
+```bash
+dvc remote add -d localremote /tmp/dvc-cache
+git commit -am "Configure DVC remote"
+```
+
+4) Ensure raw PDFs exist
+```bash
+# Option A: download automatically
+python3 src/SEC_filings.py
+# Option B: copy PDFs into data/raw/
+```
+
+5) Run pipeline and cache artifacts
+```bash
+dvc repro
+```
+
+6) Push artifacts and commit lineage
+```bash
+dvc push
+git add dvc.yaml dvc.lock *.dvc .dvc .github/workflows/dvc-smoke.yml || true
+git commit -m "Add/Update DVC pipeline and lockfile"
+git push
+```
+
+## Pipeline Stages (dvc.yaml)
+- download → `data/raw` (or a subfolder)
+- parse → `data/parsed/Apple_10K_2023`, `data/parsed/Apple_10K_2024`, `data/parsed/ocr_summary.json`
+- tables → `data/parsed/tables/Hybrid/<DOC>`
+- layout → `data/parsed/layout/<DOC>`
+- docling → `data/parsed/docling/<DOC>`
+- export → `data/parsed/provenance/<DOC>`
+
+## CI
+`.github/workflows/dvc-smoke.yml` validates the pipeline graph with:
+```bash
+dvc repro -n
+```
+
+## Troubleshooting
+- Overlapping outputs: ensure each stage writes to unique subdirs.
+- “Output is tracked by SCM”: untrack from git and let DVC manage it:
+```bash
+git rm -r --cached <path>
+git commit -m "Untrack <path> from git; managed by DVC"
+```
+- Missing version info warnings: either
+```bash
+dvc repro
+# or, associate existing outputs without rerun
+dvc commit download parse tables@0 tables@1 layout@0 layout@1 docling@0 docling@1 export@0 export@1
+dvc push
+```
+- `dvc` not found: activate venv and install DVC.
+- Parse cannot find PDFs: ensure `data/raw/*.pdf` exist or rerun the download.
+
+## Validation
+- `dvc status -c` shows no missing version info; remote in sync.
+- `dvc repro` succeeds and creates/updates `dvc.lock`.
+- Artifacts exist in `data/parsed/...` and push via `dvc push`.
+- CI smoke test runs on PRs/pushes.
 
 ### Part 9 - Evaluation: Parsing Quality & Regression
 
