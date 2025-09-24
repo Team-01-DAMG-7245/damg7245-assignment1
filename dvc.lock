@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python src/SEC_filings.py
+    deps:
+    - path: src/SEC_filings.py
+      hash: md5
+      md5: e5ec1031ed3732df5a8ede06fb46ba1d
+      size: 256
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 783d568aad6acb1726ce7f3549f6f583.dir
+      size: 19328902
+      nfiles: 2
