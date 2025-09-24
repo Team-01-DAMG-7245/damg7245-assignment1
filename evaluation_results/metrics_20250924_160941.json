@@ -1,0 +1,60 @@
+{
+  "timestamp": "20250924_160941",
+  "results": {
+    "Apple_10K_2023_page_1": {
+      "text_wer": 0.8461538461538461,
+      "text_cer": 0.8481012658227848,
+      "table_precision": 0.0,
+      "table_recall": 0.0,
+      "table_f1": 0.0,
+      "chunk_length_mean": 12,
+      "chunk_length_std": 0,
+      "numeric_token_ratio": 0.0,
+      "total_blocks": 0
+    },
+    "Apple_10K_2023_page_2": {
+      "text_wer": 0.6,
+      "text_cer": 0.5506607929515419,
+      "table_precision": 0.0,
+      "table_recall": 0.0,
+      "table_f1": 0.0,
+      "chunk_length_mean": 156.5,
+      "chunk_length_std": 57.86478491564048,
+      "numeric_token_ratio": 0.08571428571428572,
+      "total_blocks": 3
+    },
+    "Apple_10K_2023_page_3": {
+      "text_wer": 1.0,
+      "text_cer": 1.0,
+      "table_precision": 0.0,
+      "table_recall": 0.0,
+      "table_f1": 0.0,
+      "chunk_length_mean": 0,
+      "chunk_length_std": 0,
+      "numeric_token_ratio": 0,
+      "total_blocks": 0
+    },
+    "Apple_10K_2023_page_4": {
+      "text_wer": 1.0,
+      "text_cer": 1.0,
+      "table_precision": 0.0,
+      "table_recall": 0.0,
+      "table_f1": 0.0,
+      "chunk_length_mean": 0,
+      "chunk_length_std": 0,
+      "numeric_token_ratio": 0,
+      "total_blocks": 2
+    },
+    "Apple_10K_2023_page_5": {
+      "text_wer": 0.8444810744810745,
+      "text_cer": 0.8110485113059807,
+      "table_precision": 0.0,
+      "table_recall": 0.0,
+      "table_f1": 0.0,
+      "chunk_length_mean": 80.25,
+      "chunk_length_std": 40.21090233589227,
+      "numeric_token_ratio": 0.0,
+      "total_blocks": 0
+    }
+  }
+}
