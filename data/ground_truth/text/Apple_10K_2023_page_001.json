@@ -1,0 +1,20 @@
+{
+  "pdf_name": "Apple_10K_2023",
+  "page_number": 1,
+  "created_date": "2025-09-24T15:46:19.158305",
+  "instructions": "Manually correct the extracted text below. Keep structure but fix OCR errors.",
+  "blocks": [
+    {
+      "block_id": 13,
+      "type": "Title",
+      "bbox": {
+        "x1": 48.84992980957031,
+        "y1": 453.6107177734375,
+        "x2": 151.89541625976562,
+        "y2": 480.463134765625
+      },
+      "extracted_text": "Title of eac",
+      "ground_truth_text": "Title of each class Trading symbol(s) Name of each exchange on which registered"
+    }
+  ]
+}

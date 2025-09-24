@@ -1,0 +1,20 @@
+{
+  "pdf_name": "Apple_10K_2023",
+  "page_number": 2,
+  "created_date": "2025-09-24T15:46:19.158672",
+  "instructions": "Manually correct the extracted text below. Keep structure but fix OCR errors.",
+  "blocks": [
+    {
+      "block_id": 9,
+      "type": "Title",
+      "bbox": {
+        "x1": 56.74733352661133,
+        "y1": 138.30715942382812,
+        "x2": 251.61831665039062,
+        "y2": 159.1189727783203
+      },
+      "extracted_text": "are registered pursuant to Section 12(b) of the Act, indicate b\npreviously issued financial statements. ☐",
+      "ground_truth_text": "are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the registrant included in the filing reflect the correction of an error to previously issued financial statements."
+    }
+  ]
+}
