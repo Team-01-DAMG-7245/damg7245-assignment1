@@ -97,16 +97,6 @@ python src/hybrid_tables.py \
 ```
 Automatically chooses lattice when pages have ruling lines and stream otherwise.
 
-#### Step 6: PubLayNet Model
-In order to run PubLayNet model, please manually download the model_.pth and config.yml file from:
-https://huggingface.co/nlpconnect/PubLayNet-faster_rcnn_R_50_FPN_3x/tree/d4cebcc544ac0c9899748e1023e2f3ccda8ca70e
-Store them in a folder called 'publaynet-model' before running the 'layout_detection.py'
-
-#### Step 7: Extract Layout
-```
-python src/layout_detection.py
-```
-
 ## Features Implemented
 
 ### Part 1 - Text Extraction from PDFs
@@ -169,7 +159,6 @@ Final selected CSV contained properly aligned year columns and intact row labels
 - **Filings analyzed:** Apple 10-K (2023, 2024)
 - **Target pages:** Consolidated Income Statement, Balance Sheet, and Cash Flows
 
----
 
 ## Methods Compared
 1. **Camelot (Stream mode)**
@@ -210,7 +199,6 @@ Final selected CSV contained properly aligned year columns and intact row labels
   - Year columns (2021, 2022, 2023) aligned properly.  
   - Lattice mis-detected rows, and pdfplumber treated the page as plain text.
 
----
 
 ## Conclusion
 - **Best method:** Camelot **Stream mode** for borderless statements.  
@@ -225,6 +213,19 @@ Final selected CSVs (clean outputs for downstream analysis):
 
 
 ### Part 3 - Layout Detection
+
+### Implementation
+#### Step 1: PubLayNet Model
+In order to run PubLayNet model, please manually download the model_.pth and config.yml file from:
+https://huggingface.co/nlpconnect/PubLayNet-faster_rcnn_R_50_FPN_3x/tree/d4cebcc544ac0c9899748e1023e2f3ccda8ca70e
+Store them in a folder called 'publaynet-model' before running the 'layout_detection.py'
+
+#### Step 2: Extract Layout
+```
+python src/layout_detection.py
+```
+
+### Features
 - **LayoutParser Integration**: Uses PubLayNet model with PPYOLOv2 architecture
 - **Document Structure**: Detects Text, Title, List, Table, and Figure blocks
 - **Bounding Boxes**: Extracts precise coordinates for each detected element
@@ -237,7 +238,7 @@ Final selected CSVs (clean outputs for downstream analysis):
 - **Visualizations**: `data/parsed/layout/Apple_10K_YYYY/page_XXX_layout_viz.png`
 - **Summary**: `data/parsed/layout/Apple_10K_YYYY/layout_summary.json`
 
-## Part 4 - Advanced PDF Understanding with Docling
+### Part 4 - Advanced PDF Understanding with Docling
 
 ### Overview
 Docling is a specialized library for advanced PDF understanding and content normalization. It provides unified document representation with superior structure detection, reading order preservation, and formula recognition capabilities.
@@ -400,3 +401,84 @@ This looks for `data/parsed/docling/Apple_10K_2023.json` and infers `company=App
 - “Docling JSON not found”: Export Docling JSON to `data/parsed/docling/<PDF_STEM>.json`.
 - Empty sections/unknown labels: Docling may omit labels; grouping falls back to `unknown`.
 - No tables in Markdown: The summary only lists tables present in the JSONL.
+
+### Part 6 - Storage Formats: Markdown vs JSON vs TXT
+
+#### Overview
+Part 6 converts parsed PDF content into three different storage formats to understand the trade-offs between human-readable, machine-readable, and plain text representations.
+
+#### Implementation
+```
+python src/format_converter.py
+```
+
+#### Key Features
+* Smart block organization by type (Title, Text, List, Table, Figure)
+* Preserves semantic structure in Markdown
+* Rich metadata in JSON (confidence scores, bounding boxes)
+* Automated batch processing of all PDFs
+* Format comparison reports with recommendations
+
+#### Recommendations
+Use Markdown as primary format - ideal for RAG applications as it preserves semantic structure while being LLM-friendly.
+
+### Part 7
+### Part 8
+
+### Part 9 - Evaluation: Parsing Quality & Regression
+
+#### Overview
+Part 9 builds a comprehensive evaluation system to measure PDF parsing quality and detect regressions over time through ground truth comparison and automated testing.
+
+#### Implementation
+**Step 1**: Creating ground truth templates. 
+For modeling purposes, we will look at the first 5 pages of the 2023 report.
+
+```
+python src/evaluation_system.py --action create-gt --pdf Apple_10K_2023 --max-pages 5
+```
+
+**Step 2**: Manually editing ground truth. 
+Manually edit the 'ground truth' for the inaccurately extracted texts in the json file. For example,  
+```
+{
+  "extracted_text": "Appel In",
+  "ground_truth_text": "Apple Inc."  // <- Fix this
+}
+```
+
+**Step 3**: Run evaluation. 
+```
+python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023
+```
+
+**Step 4**: Run regresstion test. 
+```
+python src/test_parsing_quality.py
+```
+
+**Step 5**: Track metrics over time. 
+```
+python src/metrics_tracker.py --action both
+```
+
+#### Key Metrics
+* Word Error Rate (WER): Proportion of incorrect words (lower = better)
+* Character Error Rate (CER): Proportion of incorrect characters (lower = better)
+* Table Precision/Recall/F1: Accuracy of table extraction (higher = better)
+* Content Distribution: Chunk lengths, numeric token ratios
+
+#### Quality Thresholds
+* Pass: WER < 0.2 AND Table F1 > 0.6
+* Warning: WER < 0.4 AND Table F1 > 0.4
+* Fail: WER ≥ 0.4 OR Table F1 ≤ 0.4
+
+#### Key Features
+* Automated quality measurement against manually corrected ground truth
+* Unit tests that fail when parsing quality degrades
+* Statistical drift detection over time
+* Comprehensive visualizations of metrics trends
+* Detailed reports identifying specific weaknesses
+
+#### Sample result and purpose
+The poor performance metrics (85.8% word error rate) successfully demonstrate the evaluation system works correctly by identifying significant parsing pipeline issues that need improvement.
