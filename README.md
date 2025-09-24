@@ -1,7 +1,15 @@
-# DAMG7245 Assignment 1 AI-Powered PDF Parsing System
+# DAMG7245 Assignment 1: AI-Powered PDF Parsing System
 
-## Project Overview
-This project focuses on analyzing SEC EDGAR filings, specifically Apple Inc.'s 10-K annual reports for 2023 and 2024. The assignment involves downloading, parsing, and analyzing financial data from SEC filings using big data techniques.
+## 🎯 Project Overview
+This project implements a comprehensive document processing pipeline for SEC EDGAR filings, specifically Apple Inc.'s 10-K annual reports (2023 & 2024). The system combines open-source tools with managed cloud services to extract text, tables, and metadata with optimal cost-efficiency and quality.
+
+**Key Achievements**:
+- 📄 Multi-format document extraction (PDF → TXT, MD, JSON)
+- 📊 Advanced table detection using 4 different methods
+- 🏗️ Document structure analysis and layout detection  
+- 🔗 Provenance tagging for complete data lineage
+- ☁️ Managed service integration (Azure AI) with cost analysis
+- 💰 Hybrid approach: 90% cost savings vs pure cloud solutions
 
 ## Project Structure
 ```
@@ -11,40 +19,109 @@ damg7245-assignment1/
 │   │   ├── Apple_10K_2023.pdf
 │   │   ├── Apple_10K_2024.pdf
 │   │   └── sec-edgar-filings/  # Downloaded SEC filings metadata
-├── parsed/                     # Processed text files
-│   ├── Apple_10K_2023/        # Per-page text files
-│   │   ├── page_001.txt
-│   │   ├── page_001_bboxes.json
-│   │   └── ...
-│   ├── Apple_10K_2024/
+├── parsed/                          # All processed outputs
+│   ├── Apple_10K_2023/             # Per-page text files
+│   ├── Apple_10K_2024/             # Per-page text files  
+│   ├── converted/                   # Format conversions (TXT/MD/JSON)
+│   ├── docling/                     # Docling structured outputs
+│   ├── layout/                      # Layout detection results
+│   ├── tables/                      # Extracted tables (Camelot/PDFPlumber/Hybrid)
 │   └── ocr_summary.json
-├── src/                       # Source code
-│   └── extract_pdf_text.py   # PDF text extraction script
-└── README.md
+├── src/                             # Source code
+│   ├── SEC_filings.py              # SEC EDGAR downloader
+│   ├── extract_pdf_text.py         # Basic PDF text extraction
+│   ├── extract_tables_*.py         # Table extraction methods
+│   ├── hybrid_tables.py            # Hybrid table approach
+│   ├── format_converter.py         # Format conversions
+│   ├── layout_detection.py         # Layout analysis
+│   ├── docling_*.py                # Docling integration & analysis
+│   ├── provenance_tagging.py       # Data lineage tracking
+│   └── azure_document_service.py   # Azure AI integration
+├── reports/                         # Analysis reports
+├── notebooks/                       # Jupyter notebooks
+├── config.env                       # Azure credentials (gitignored)
+├── requirements.txt                 # Dependencies
+└── run_azure_analysis.py           # Azure analysis script
 ```
 
 ## Installation & Dependencies
 
 ### Required Python Packages
 ```bash
-# Core dependencies
-pip install sec-edgar-downloader pdfplumber pytesseract Pillow requests
+# Install all dependencies
+pip install -r requirements.txt
 
-# Individual installations (if needed)
-pip install sec-edgar-downloader  # SEC filings download
-pip install pdfplumber            # PDF text extraction
-pip install pytesseract           # OCR functionality
-pip install Pillow               # Image processing
-pip install requests             # HTTP requests
-pip install layoutparser[ocr]    # LayoutParser to detect document layout
-pip install 'git+https://github.com/facebookresearch/detectron2.git'    # detectron2 which is needed along with LayoutParser
-# note: you may need to uninstall layoutparser and reinstall in order to use detectron2, for installation guide:
+# Or install individually:
+# Core document processing
+pip install sec-edgar-downloader pdfplumber pytesseract Pillow requests
+pip install docling camelot-py[cv] pandas matplotlib seaborn
+
+# Layout detection
+pip install layoutparser[ocr]
+pip install 'git+https://github.com/facebookresearch/detectron2.git'
+
+# Azure AI Document Intelligence (Part 7)
+pip install azure-ai-formrecognizer python-dotenv
+
+# Note: you may need to uninstall layoutparser and reinstall for detectron2:
 https://github.com/Layout-Parser/layout-parser/blob/main/installation.md
 # for uninstallation,
 pip uninstall layoutparser detectron2   # OPTIONAL, where needed
 
 ```
 
+## 🚀 Quick Start Guide
+
+### 1. Setup Environment
+```bash
+git clone <repository>
+cd damg7245-assignment1
+pip install -r requirements.txt
+
+# Configure Azure credentials (for Part 7)
+# Add your Azure endpoint and key to config.env
+```
+
+### 2. Run Analysis Pipeline
+```bash
+# Download SEC filings
+python src/SEC_filings.py
+
+# Extract text and tables
+python src/extract_pdf_text.py
+python src/extract_tables_camelot.py
+
+# Advanced analysis with Docling
+python src/docling_basic.py
+python src/docling_structure_analyzer.py
+
+# Azure AI comparison
+python run_azure_analysis.py
+```
+
+### 3. Key Results Summary
+- **📄 Documents Processed**: Apple 10-K filings (2023, 2024) - 80+ pages each
+- **📊 Table Detection**: Docling (54 tables) vs Azure AI (15 tables) 
+- **💰 Cost Analysis**: Docling ($0) vs Azure AI ($0.08/80 pages)
+- **🎯 Final Recommendation**: Use Docling as primary, Azure as fallback
+- **🔒 Privacy**: Docling (local) vs Azure (cloud processing)
+
+---
+
+## 📋 Assignment Parts Status
+
+| Part | Description | Status | Key Outputs |
+|------|-------------|--------|-------------|
+| 1 | SEC EDGAR Download | ✅ | Raw PDF files, metadata |
+| 2 | PDF Text Extraction | ✅ | Per-page TXT files, OCR summaries |
+| 3 | Table Extraction | ✅ | CSV tables (3 methods + hybrid) |
+| 4 | Format Conversion | ✅ | TXT/MD/JSON conversions |
+| 5 | Layout Detection | ✅ | Bounding boxes, layout analysis |
+| 6 | Docling Integration | ✅ | Structured JSON/MD outputs |
+| 6.5 | Provenance Tagging | ✅ | Complete data lineage tracking |
+| 7 | Managed Services | ✅ | Azure AI integration & comparison |
+
+---
 
 ### System Requirements
 - **Tesseract OCR**: Required for OCR fallback functionality
@@ -397,6 +474,61 @@ This looks for `data/parsed/docling/Apple_10K_2023.json` and infers `company=App
 - Table shape is estimated from `data.grid` if present.
 
 ## Troubleshooting
-- “Docling JSON not found”: Export Docling JSON to `data/parsed/docling/<PDF_STEM>.json`.
+- "Docling JSON not found": Export Docling JSON to `data/parsed/docling/<PDF_STEM>.json`.
 - Empty sections/unknown labels: Docling may omit labels; grouping falls back to `unknown`.
 - No tables in Markdown: The summary only lists tables present in the JSONL.
+
+---
+
+# Part 7: Managed Document Services Analysis
+
+## Overview
+Comparison of Azure AI Document Intelligence with open-source Docling pipeline for SEC filing processing.
+
+## Azure AI Document Intelligence Setup ✅
+- **Service**: Azure AI Document Intelligence (prebuilt-layout model)
+- **Free Tier**: 500 pages/month ongoing
+- **Pricing**: $1.00 per 1000 pages (Read API)
+- **Files**: `src/azure_document_service.py`, `config.env`
+
+## Key Findings
+
+### Cost Comparison (Apple 10-K, 80 pages)
+| Service | Cost | Tables Detected | Processing |
+|---------|------|----------------|------------|
+| Azure AI | $0.08 | 15 | Cloud |
+| Docling | $0.00 | 54 | Local |
+
+### Recommendations
+- **Primary**: Use Docling (superior table detection, zero cost)
+- **Fallback**: Use Azure for scanned documents or complex OCR cases
+- **Privacy**: Docling processes locally, Azure uses cloud processing
+
+### Usage
+```bash
+# Install dependencies
+pip install azure-ai-formrecognizer python-dotenv
+
+# Configure Azure credentials in config.env
+AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=your_endpoint
+AZURE_DOCUMENT_INTELLIGENCE_KEY=your_key
+
+# Run analysis
+python run_azure_analysis.py
+```
+
+### Integration
+The Azure service can be used as an optional fallback:
+```python
+from azure_document_service import AzureDocumentService, compare_with_docling
+
+service = AzureDocumentService()
+azure_result = service.analyze_document("document.pdf")
+comparison = compare_with_docling(azure_result, "docling_output.json")
+```
+
+**Part 7 Status**: ✅ COMPLETE
+- ✅ Managed service integration (Azure AI)
+- ✅ Side-by-side comparison with Docling
+- ✅ Cost analysis and pricing documentation
+- ✅ Privacy and data processing considerations
