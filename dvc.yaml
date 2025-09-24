@@ -1,0 +1,69 @@
+stages:
+  download:
+    cmd: python src/SEC_filings.py
+    deps:
+      - src/SEC_filings.py
+    outs:
+      - data/raw
+
+  parse:
+    cmd: python src/extract_pdf_text.py
+    deps:
+      - src/extract_pdf_text.py
+      - data/raw
+    outs:
+      - data/parsed
+
+  tables:
+    foreach:
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: >
+        python src/hybrid_tables.py --pdf ${item} --pages 1-300 --out data/parsed/tables/Hybrid
+      deps:
+        - src/hybrid_tables.py
+        - ${item}
+      outs:
+        - data/parsed/tables/Hybrid
+
+  layout:
+    foreach:
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: >
+        python src/layout_detection.py --pdf ${item} --parsed-dir data/parsed
+      deps:
+        - src/layout_detection.py
+        - ${item}
+      outs:
+        - data/parsed/layout
+
+  docling:
+    foreach:
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: >
+        python src/docling_basic.py --pdf ${item} --output data/parsed/docling
+      deps:
+        - src/docling_basic.py
+        - ${item}
+      outs:
+        - data/parsed/docling
+
+  export:
+    foreach:
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: >
+        python src/provenance_tagging.py --pdf ${item} --out data/parsed/docling
+      deps:
+        - src/provenance_tagging.py
+        - ${item}
+        - data/parsed/docling
+      outs:
+        - data/parsed/docling
+
