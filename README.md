@@ -15,14 +15,25 @@ This project implements a comprehensive document processing pipeline for SEC EDG
 ```
 damg7245-assignment1/
 ├── data/
-│   ├── raw/                    # Raw PDF files
+│   ├── raw/                         # Raw PDF files
 │   │   ├── Apple_10K_2023.pdf
 │   │   ├── Apple_10K_2024.pdf
-│   │   └── sec-edgar-filings/  # Downloaded SEC filings metadata
+│   │   └── sec-edgar-filings/       # Downloaded SEC filings metadata
+│   └── ground_truth/                # Part 9: Manual ground truth corrections
+│       ├── text/                    # Text ground truth files
+│       │   ├── Apple_10K_2023_page_001.json
+│       │   ├── Apple_10K_2023_page_002.json
+│       │   └── ...
+│       ├── tables/                  # Table ground truth files
+│       │   └── *.json
+│       └── metadata/                # Ground truth metadata
 ├── parsed/                          # All processed outputs
 │   ├── Apple_10K_2023/             # Per-page text files
 │   ├── Apple_10K_2024/             # Per-page text files  
-│   ├── converted/                   # Format conversions (TXT/MD/JSON)
+│   ├── converted/                   # Part 6: Format conversions
+│   │   ├── markdown/                # Markdown files (RAG-ready)
+│   │   ├── json/                    # Structured JSON data
+│   │   └── txt/                     # Plain text files
 │   ├── docling/                     # Docling structured outputs
 │   ├── layout/                      # Layout detection results
 │   ├── tables/                      # Extracted tables (Camelot/PDFPlumber/Hybrid)
@@ -32,12 +43,23 @@ damg7245-assignment1/
 │   ├── extract_pdf_text.py         # Basic PDF text extraction
 │   ├── extract_tables_*.py         # Table extraction methods
 │   ├── hybrid_tables.py            # Hybrid table approach
-│   ├── format_converter.py         # Format conversions
+│   ├── complete_pdf_converter.py   # Part 6: Multi-format converter
+│   ├── evaluation_system.py        # Part 9: Main evaluation framework
+│   ├── test_parsing_quality.py     # Part 9: Regression tests
+│   ├── metrics_tracker.py          # Part 9: Drift detection & visualization
 │   ├── layout_detection.py         # Layout analysis
 │   ├── docling_*.py                # Docling integration & analysis
 │   ├── provenance_tagging.py       # Data lineage tracking
 │   └── azure_document_service.py   # Azure AI integration
-├── reports/                         # Analysis reports
+├── reports/                         # Analysis reports & Part 6 format comparisons
+│   └── *_format_report.md          # Part 6: Format comparison reports
+├── evaluation_results/              # Part 9: Evaluation outputs
+│   ├── metrics_*.json              # Raw evaluation metrics
+│   ├── evaluation_report_*.md      # Quality assessment reports
+│   ├── metrics_plot_*.png          # Metric visualizations
+│   ├── metrics_timeline_*.png      # Time series plots
+│   ├── distribution_drift_*.png    # Distribution analysis
+│   └── drift_analysis_*.md         # Drift detection reports
 ├── notebooks/                       # Jupyter notebooks
 ├── config.env                       # Azure credentials (gitignored)
 ├── requirements.txt                 # Dependencies
