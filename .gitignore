@@ -35,6 +35,11 @@ Temporary Items
 *.icloud
 
 ### Python ###
+# Configuration files with sensitive data
+config.env
+*.env
+.env*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

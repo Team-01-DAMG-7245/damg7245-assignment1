@@ -1,0 +1,43 @@
+{
+  "pdf_name": "Apple_10K_2023",
+  "page_number": 3,
+  "created_date": "2025-09-24T15:46:19.158940",
+  "instructions": "Manually correct the extracted text below. Keep structure but fix OCR errors.",
+  "blocks": [
+    {
+      "block_id": 0,
+      "type": "Title",
+      "bbox": {"x1": 0, "y1": 0, "x2": 100, "y2": 20},
+      "extracted_text": "",
+      "ground_truth_text": "Apple Inc."
+    },
+    {
+      "block_id": 1,
+      "type": "Title", 
+      "bbox": {"x1": 0, "y1": 20, "x2": 100, "y2": 40},
+      "extracted_text": "",
+      "ground_truth_text": "Form 10-K"
+    },
+    {
+      "block_id": 2,
+      "type": "Text",
+      "bbox": {"x1": 0, "y1": 40, "x2": 300, "y2": 60},
+      "extracted_text": "",
+      "ground_truth_text": "For the Fiscal Year Ended September 30, 2023"
+    },
+    {
+      "block_id": 3,
+      "type": "Title",
+      "bbox": {"x1": 0, "y1": 80, "x2": 200, "y2": 100},
+      "extracted_text": "",
+      "ground_truth_text": "TABLE OF CONTENTS"
+    },
+    {
+      "block_id": 4,
+      "type": "List",
+      "bbox": {"x1": 0, "y1": 100, "x2": 400, "y2": 400},
+      "extracted_text": "",
+      "ground_truth_text": "Part I\nItem 1. Business 1\nItem 1A. Risk Factors 5\nItem 1B. Unresolved Staff Comments 16\nItem 1C. Cybersecurity 16\nItem 2. Properties 17\nItem 3. Legal Proceedings 17\nItem 4. Mine Safety Disclosures 17\nPart II\nItem 5. Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 18\nItem 6. [Reserved] 19\nItem 7. Management's Discussion and Analysis of Financial Condition and Results of Operations 20\nItem 7A. Quantitative and Qualitative Disclosures About Market Risk 26\nItem 8. Financial Statements and Supplementary Data 27\nItem 9. Changes in and Disagreements with Accountants on Accounting and Financial Disclosure 52\nItem 9A. Controls and Procedures 52\nItem 9B. Other Information 53\nItem 9C. Disclosure Regarding Foreign Jurisdictions that Prevent Inspections 53\nPart III\nItem 10. Directors, Executive Officers and Corporate Governance 53\nItem 11. Executive Compensation 53\nItem 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters 53\nItem 13. Certain Relationships and Related Transactions, and Director Independence 53\nItem 14. Principal Accountant Fees and Services 53\nPart IV\nItem 15. Exhibit and Financial Statement Schedules 54\nItem 16. Form 10-K Summary 57"
+    }
+  ]
+}

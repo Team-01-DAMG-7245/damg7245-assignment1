@@ -1,0 +1,68 @@
+{
+  "pdf_name": "Apple_10K_2023",
+  "page_number": 5,
+  "created_date": "2025-09-24T15:46:19.159547",
+  "instructions": "Manually correct the extracted text below. Keep structure but fix OCR errors.",
+  "blocks": [
+    {
+      "block_id": 8,
+      "type": "Title",
+      "bbox": {
+        "x1": 51.85373306274414,
+        "y1": 378.57269287109375,
+        "x2": 158.6685791015625,
+        "y2": 406.35687255859375
+      },
+      "extracted_text": "ts\nmpany manages its business p\nnd Rest of Asia Pacific. Americ\nreater China includes China m",
+      "ground_truth_text": "The company manages its business primarily on a geographic basis. The Company's reportable segments consist of the Americas, Europe, Greater China,Japan and Rest of Asia Pacific"
+    },
+    {
+      "block_id": 11,
+      "type": "Title",
+      "bbox": {
+        "x1": 50.20969009399414,
+        "y1": 216.3202362060547,
+        "x2": 144.143798828125,
+        "y2": 242.9688720703125
+      },
+      "extracted_text": "mpany’s cloud services store\nontent",
+      "ground_truth_text": "The Company’s cloud services store and keep customers’ content up-to-date and available across multiple Apple devices and Windows personal computers."
+    },
+    {
+      "block_id": 12,
+      "type": "Title",
+      "bbox": {
+        "x1": 52.78839874267578,
+        "y1": 659.2188720703125,
+        "x2": 201.14492797851562,
+        "y2": 689.1083374023438
+      },
+      "extracted_text": "",
+      "ground_truth_text": "Digital Content"
+    },
+    {
+      "block_id": 13,
+      "type": "Title",
+      "bbox": {
+        "x1": 50.306968688964844,
+        "y1": 266.9805603027344,
+        "x2": 163.52127075195312,
+        "y2": 291.96514892578125
+      },
+      "extracted_text": "music, video, games and podcast\nmpany also offers digital conten",
+      "ground_truth_text": "The Company operates various platforms, including the App Store®, that allow customers to discover and download applications and digital content, such as books, music, video, games and podcasts."
+    },
+    {
+      "block_id": 16,
+      "type": "Title",
+      "bbox": {
+        "x1": 52.162967681884766,
+        "y1": 547.0845947265625,
+        "x2": 204.49342346191406,
+        "y2": 573.7978515625
+      },
+      "extracted_text": "kets for the Company’s products and servi\non gross margins, frequent introduction of\nprice and performance characteristics, rapid",
+      "ground_truth_text": "The markets for the Company’s products and services are highly competitive, and are characterized by aggressive price competition and resulting downward pressure on gross margins, frequent introduction of new products and services, short product life cycles, evolving industry standards, continual improvement inproduct price and performance characteristics, rapid adoption of technological advancements by competitors, and price sensitivity on the part of consumers and businesses." 
+    }
+  ]
+}

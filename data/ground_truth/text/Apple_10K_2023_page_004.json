@@ -1,0 +1,44 @@
+{
+  "pdf_name": "Apple_10K_2023",
+  "page_number": 4,
+  "created_date": "2025-09-24T15:46:19.159173",
+  "instructions": "Manually correct the extracted text below. Keep structure but fix OCR errors.",
+  "blocks": [
+    {
+      "block_id": 18,
+      "type": "Title",
+      "bbox": {
+        "x1": 50.915199279785156,
+        "y1": 637.6716918945312,
+        "x2": 122.52887725830078,
+        "y2": 668.3507690429688
+      },
+      "extracted_text": "",
+      "ground_truth_text": "PART I"
+    },
+    {
+      "block_id": 19,
+      "type": "Title",
+      "bbox": {
+        "x1": 102.82904052734375,
+        "y1": 697.3067626953125,
+        "x2": 243.07887268066406,
+        "y2": 724.8619995117188
+      },
+      "extracted_text": "",
+      "ground_truth_text": "Item 1. Business"
+    },
+    {
+      "block_id": 20,
+      "type": "Title",
+      "bbox": {
+        "x1": 50.7679443359375,
+        "y1": 746.2730102539062,
+        "x2": 294.57415771484375,
+        "y2": 774.8303833007812
+      },
+      "extracted_text": "",
+      "ground_truth_text": "Company Background"
+    }
+  ]
+}
