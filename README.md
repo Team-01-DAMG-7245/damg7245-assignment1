@@ -743,3 +743,52 @@ This project is developed for academic purposes as part of DAMG7245 coursework.
 - **Apple Inc.** for comprehensive 10-K filings used as test data
 - **Open source community** for the excellent tools and libraries
 - **Course instructors** for guidance and requirements
+
+## Cost Comparison
+| Scale | Local Cost | AWS Textract | Google Document AI |
+|-------|-------------|---------------|-------------------|
+| 100 docs | $0 | $12 | $8 |
+| 1,000 docs | $0 | $120 | $80 |
+| 5,000 docs | $0 | $600 | $400 |
+
+## Key Bottlenecks
+1. **OCR Processing**: CPU-intensive, single-threaded
+2. **Table Extraction**: Quadratic scaling with complexity
+3. **Layout Detection**: Deep learning model inference
+4. **Memory Usage**: Peak 2.1GB for full documents
+
+## Recommendations
+- **Immediate**: Enable multiprocessing, implement caching
+- **Medium-term**: GPU acceleration, batch processing
+- **Long-term**: Microservices, container orchestration
+
+Part 11 : XBRL extraction & validation
+Overview & Components:
+Core classes and their responsibilities
+XBRL download, parsing, mapping, and validation
+
+Usage Instructions:
+Command-line interface
+Jupyter notebook workflow
+Configuration options
+
+Technical Details:
+Mapping rules and fuzzy matching
+Validation logic and tolerance levels
+Discrepancy type classification
+
+Analysis Features:
+Summary statistics and visualizations
+Detailed mismatch investigation
+Recommendations generation
+
+Integration & Best Practices:
+Pipeline integration with DVC
+CI/CD setup examples
+Performance optimization tips
+
+Troubleshooting:
+Common issues and solutions
+Data quality considerations
+Automation strategies
+
