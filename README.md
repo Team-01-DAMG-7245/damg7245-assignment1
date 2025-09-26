@@ -786,3 +786,34 @@ Performance benchmarking and cost analysis for scaling document processing from 
 - **Immediate**: Enable multiprocessing, implement caching
 - **Medium-term**: GPU acceleration, batch processing
 - **Long-term**: Microservices, container orchestration
+
+Part 11 : XBRL extraction & validation
+Overview & Components:
+Core classes and their responsibilities
+XBRL download, parsing, mapping, and validation
+
+Usage Instructions:
+Command-line interface
+Jupyter notebook workflow
+Configuration options
+
+Technical Details:
+Mapping rules and fuzzy matching
+Validation logic and tolerance levels
+Discrepancy type classification
+
+Analysis Features:
+Summary statistics and visualizations
+Detailed mismatch investigation
+Recommendations generation
+
+Integration & Best Practices:
+Pipeline integration with DVC
+CI/CD setup examples
+Performance optimization tips
+
+Troubleshooting:
+Common issues and solutions
+Data quality considerations
+Automation strategies
+
