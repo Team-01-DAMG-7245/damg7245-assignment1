@@ -3,6 +3,8 @@
 ## 🎯 Project Overview
 This project implements a comprehensive document processing pipeline for SEC EDGAR filings, specifically Apple Inc.'s 10-K annual reports (2023 & 2024). The system combines open-source tools with managed cloud services to extract text, tables, and metadata with optimal cost-efficiency and quality.
 
+**Demo**: https://www.youtube.com/watch?v=pdaxnsWtFEM
+
 **Key Achievements**:
 - 📄 Multi-format document extraction (PDF → TXT, MD, JSON)
 - 📊 Advanced table detection using 4 different methods
