@@ -685,6 +685,16 @@ cd damg7245-assignment1
 # Install dependencies
 pip install -r requirements.txt
 
+# Installation notes
+# Detectron2 may need manual installation:
+# pip install 'git+https://github.com/facebookresearch/detectron2.git'
+# LayoutParser compatibility: If you encounter issues, uninstall and reinstall:
+# pip uninstall layoutparser detectron2
+# pip install layoutparser[ocr]
+# pip install 'git+https://github.com/facebookresearch/detectron2.git'
+
+
+
 # Configure Azure credentials (optional, for Part 7)
 # Add your Azure endpoint and key to config.env
 AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=your_endpoint
@@ -762,33 +772,4 @@ This project is developed for academic purposes as part of DAMG7245 coursework.
 - **Medium-term**: GPU acceleration, batch processing
 - **Long-term**: Microservices, container orchestration
 
-Part 11 : XBRL extraction & validation
-Overview & Components:
-Core classes and their responsibilities
-XBRL download, parsing, mapping, and validation
-
-Usage Instructions:
-Command-line interface
-Jupyter notebook workflow
-Configuration options
-
-Technical Details:
-Mapping rules and fuzzy matching
-Validation logic and tolerance levels
-Discrepancy type classification
-
-Analysis Features:
-Summary statistics and visualizations
-Detailed mismatch investigation
-Recommendations generation
-
-Integration & Best Practices:
-Pipeline integration with DVC
-CI/CD setup examples
-Performance optimization tips
-
-Troubleshooting:
-Common issues and solutions
-Data quality considerations
-Automation strategies
 
