@@ -19,9 +19,10 @@ This project implements a comprehensive document processing pipeline for SEC EDG
 | **Natnicha** | Parts 3, 6, 9 | Layout detection, storage formats comparison, evaluation system |
 | **Kundana** | Parts 2, 5, 8, 10 | Table extraction, provenance tagging, DVC pipeline, performance benchmarking |
 
-Github: https://github.com/Team-01-DAMG-7245/damg7245-assignment1
-Demo Video: https://youtu.be/pdaxnsWtFEM
-CodeLab Documentation: https://codelabs-preview.appspot.com/?file_id=1U1xF5oAFuT8DK0EQjOYFJxlDfXBcOCj1FJ1kPFaD-lA/edit?tab=t.0#0
+- Github: https://github.com/Team-01-DAMG-7245/damg7245-assignment1
+- Demo Video: https://youtu.be/pdaxnsWtFEM
+- CodeLab Documentation: https://codelabs-preview.appspot.com/?file_id=1U1xF5oAFuT8DK0EQjOYFJxlDfXBcOCj1FJ1kPFaD-lA/edit?tab=t.0#0
+  
 ## Project Structure
 ```
 damg7245-assignment1/
