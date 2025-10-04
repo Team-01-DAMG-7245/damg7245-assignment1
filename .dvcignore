@@ -1,3 +1,51 @@
-# Add patterns of files dvc should ignore, which could improve
-# the performance. Learn more at
-# https://dvc.org/doc/user-guide/dvcignore
+# .dvcignore
+# Files and directories to ignore in DVC tracking
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Cache
+.cache/
+.pytest_cache/
+
+# Model checkpoints (tracked separately)
+*.pth
+*.pkl
+
+# Large intermediates (only track final outputs)
+*.png
+*.jpg
+*.jpeg

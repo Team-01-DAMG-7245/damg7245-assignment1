@@ -1,0 +1,71 @@
+# dvc.yaml
+# Data Version Control pipeline for Project LANTERN
+
+stages:
+  download:
+    cmd: python src/SEC_filings.py
+    deps:
+      - src/SEC_filings.py
+    outs:
+      - data/raw
+    desc: Download SEC 10-K/10-Q filings with XBRL attachments
+
+  extract_text:
+    cmd: python src/extract_pdf_text.py
+    deps:
+      - src/extract_pdf_text.py
+      - data/raw
+    outs:
+      - data/parsed/Apple_10K_2023
+      - data/parsed/Apple_10K_2024
+    desc: Extract per-page text with OCR fallback
+
+  extract_tables:
+    cmd: python src/hybrid_tables.py --input-dir data/raw --output-dir data/parsed/tables
+    deps:
+      - src/hybrid_tables.py
+      - data/raw
+    outs:
+      - data/parsed/tables
+    desc: Extract tables using hybrid approach
+
+  layout_detection:
+    cmd: python src/layout_detection.py --raw-dir data/raw --parsed-dir data/parsed
+    deps:
+      - src/layout_detection.py
+      - data/raw
+      - publaynet-model
+    outs:
+      - data/parsed/layout
+    desc: Detect document layout using LayoutParser
+
+  convert_formats:
+    cmd: python src/format_converter.py
+    deps:
+      - src/format_converter.py
+      - data/parsed/layout
+      - data/raw
+    outs:
+      - data/parsed/converted
+      - reports
+    desc: Convert to Markdown, JSON, and TXT formats
+
+  evaluate_quality:
+    cmd: python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023
+    deps:
+      - src/evaluation_system.py
+      - data/parsed/converted
+      - data/ground_truth
+    outs:
+      - evaluation_results
+    desc: Evaluate parsing quality against ground truth
+
+  validate_xbrl:
+    cmd: python src/xbrl_validation.py --ticker AAPL --filing-type 10-K --year 2023
+    deps:
+      - src/xbrl_validation.py
+      - data/parsed/converted
+      - data/raw
+    outs:
+      - data/xbrl_validation
+    desc: Cross-validate with XBRL data
