@@ -1,0 +1,44 @@
+Deferred Tax Assets and Liabilities
+As of September 30, 2023 and September 24, 2022, the significant components of the Company’s deferred tax assets and liabilities were (in millions):
+2023 2022
+Deferred tax assets:
+Tax credit carryforwards $ 8,302 $ 6,962
+Accrued liabilities and other reserves 6,365 6,515
+Capitalized research and development 6,294 1,267
+Deferred revenue 4,571 5,742
+Unrealized losses 2,447 2,913
+Lease liabilities 2,421 2,400
+Other 2,343 3,407
+Total deferred tax assets 32,743 29,206
+Less: Valuation allowance (8,374) (7,530)
+Total deferred tax assets, net 24,369 21,676
+Deferred tax liabilities:
+Right-of-use assets 2,179 2,163
+Depreciation 1,998 1,582
+Minimum tax on foreign earnings 1,940 1,983
+Unrealized gains 511 942
+Other 490 469
+Total deferred tax liabilities 7,118 7,139
+Net deferred tax assets $ 17,251 $ 14,537
+As of September 30, 2023, the Company had $5.2 billion in foreign tax credit carryforwards in Ireland and $3.0 billion in California R&D credit carryforwards,
+both of which can be carried forward indefinitely. A valuation allowance has been recorded for the credit carryforwards and a portion of other temporary
+differences.
+Uncertain Tax Positions
+As of September 30, 2023, the total amount of gross unrecognized tax benefits was $19.5 billion, of which $9.5 billion, if recognized, would impact the
+Company’s effective tax rate. As of September 24, 2022, the total amount of gross unrecognized tax benefits was $16.8 billion, of which $8.0 billion, if
+recognized, would have impacted the Company’s effective tax rate.
+The aggregate change in the balance of gross unrecognized tax benefits, which excludes interest and penalties, for 2023, 2022 and 2021, is as follows (in
+millions):
+2023 2022 2021
+Beginning balances $ 16,758 $ 15,477 $ 16,475
+Increases related to tax positions taken during a prior year 2,044 2,284 816
+Decreases related to tax positions taken during a prior year (1,463) (1,982) (1,402)
+Increases related to tax positions taken during the current year 2,628 1,936 1,607
+Decreases related to settlements with taxing authorities (19) (28) (1,838)
+Decreases related to expiration of the statute of limitations (494) (929) (181)
+Ending balances $ 19,454 $ 16,758 $ 15,477
+The Company is subject to taxation and files income tax returns in the U.S. federal jurisdiction and many state and foreign jurisdictions. Tax years after 2017 for
+the U.S. federal jurisdiction, and after 2014 in certain major foreign jurisdictions, remain subject to examination. Although the timing of resolution or closure of
+examinations is not certain, the Company believes it is reasonably possible that its gross unrecognized tax benefits could decrease in the next 12 months by as
+much as $4.5 billion.
+Apple Inc. | 2023 Form 10-K | 41

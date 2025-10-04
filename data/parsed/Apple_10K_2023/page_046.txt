@@ -1,0 +1,34 @@
+Lease liability maturities as of September 30, 2023, are as follows (in millions):
+Operating Finance
+Leases Leases Total
+2024 $ 1,719 $ 196 $ 1,915
+2025 1,875 151 2,026
+2026 1,732 120 1,852
+2027 1,351 52 1,403
+2028 1,181 34 1,215
+Thereafter 5,983 872 6,855
+Total undiscounted liabilities 13,841 1,425 15,266
+Less: Imputed interest (2,023) (401) (2,424)
+Total lease liabilities $ 11,818 $ 1,024 $ 12,842
+The weighted-average remaining lease term related to the Company’s lease liabilities as of September 30, 2023 and September 24, 2022 was 10.6 years and
+10.1 years, respectively. The discount rate related to the Company’s lease liabilities as of September 30, 2023 and September 24, 2022 was 3.0% and 2.3%,
+respectively. The discount rates related to the Company’s lease liabilities are generally based on estimates of the Company’s incremental borrowing rate, as the
+discount rates implicit in the Company’s leases cannot be readily determined.
+As of September 30, 2023, the Company had $544 million of future payments under additional leases, primarily for corporate facilities and retail space, that had
+not yet commenced. These leases will commence between 2024 and 2026, with lease terms ranging from 1 year to 21 years.
+Note 9 – Debt
+Commercial Paper
+The Company issues unsecured short-term promissory notes pursuant to a commercial paper program. The Company uses net proceeds from the commercial
+paper program for general corporate purposes, including dividends and share repurchases. As of September 30, 2023 and September 24, 2022, the Company
+had $6.0 billion and $10.0 billion of commercial paper outstanding, respectively, with maturities generally less than nine months. The weighted-average interest
+rate of the Company’s commercial paper was 5.28% and 2.31% as of September 30, 2023 and September 24, 2022, respectively. The following table provides a
+summary of cash flows associated with the issuance and maturities of commercial paper for 2023, 2022 and 2021 (in millions):
+2023 2022 2021
+Maturities 90 days or less:
+Proceeds from/(Repayments of) commercial paper, net $ (1,333) $ 5,264 $ (357)
+Maturities greater than 90 days:
+Proceeds from commercial paper — 5,948 7,946
+Repayments of commercial paper (2,645) (7,257) (6,567)
+Proceeds from/(Repayments of) commercial paper, net (2,645) (1,309) 1,379
+Total proceeds from/(repayments of) commercial paper, net $ (3,978) $ 3,955 $ 1,022
+Apple Inc. | 2023 Form 10-K | 43

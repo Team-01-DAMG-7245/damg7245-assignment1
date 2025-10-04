@@ -66,4 +66,4 @@
 - When metadata (confidence, coordinates) is needed
 - For building search indexes
 
-Generated on: 2025-09-23 17:03:33
+Generated on: 2025-09-26 20:10:28

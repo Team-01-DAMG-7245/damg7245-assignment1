@@ -720,7 +720,7 @@ python src/hybrid_tables.py
 python src/docling_basic.py
 
 # 5. Run evaluation system
-python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023
+python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023 --max-pages 5
 
 # 6. Generate performance benchmarks
 python src/metrics_tracker.py --action both

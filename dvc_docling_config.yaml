@@ -1,0 +1,18 @@
+# Add to dvc.yaml
+stages:
+  docling_extract:
+    cmd: python src/docling_basic.py --pdf ${item} --output data/parsed/docling/
+    foreach: 
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    deps:
+      - src/docling_basic.py
+      - ${item}
+    outs:
+      - data/parsed/docling/${item.stem}/
+
+# Add to params.yaml
+docling:
+  export_markdown: true
+  export_json: true
+  analyze_structure: true

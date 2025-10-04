@@ -1,0 +1,12 @@
+Company Stock Performance
+The following graph shows a comparison of five-year cumulative total shareholder return, calculated on a dividend-reinvested basis, for the Company, the S&P
+500 Index and the Dow Jones U.S. Technology Supersector Index. The graph assumes $100 was invested in each of the Company’s common stock, the S&P
+500 Index and the Dow Jones U.S. Technology Supersector Index as of the market close on September 28, 2018. Past stock price performance is not
+necessarily indicative of future stock price performance.
+September September September September September September
+2018 2019 2020 2021 2022 2023
+Apple Inc. $ 100 $ 98 $ 204 $ 269 $ 277 $ 317
+S&P 500 Index $ 100 $ 104 $ 118 $ 161 $ 136 $ 160
+Dow Jones U.S. Technology Supersector Index $ 100 $ 105 $ 154 $ 227 $ 164 $ 226
+Item 6. [Reserved]
+Apple Inc. | 2023 Form 10-K | 19

@@ -1,0 +1,36 @@
+the Vesting Commencement Date) and the Severance Date, and the denominator of which shall be the number of days between the Vesting
+Date that immediately preceded the Severance Date (or, in the case of a Termination of Service prior to the initial Vesting Date, the Vesting
+Commencement Date) and the next Vesting Date following the Severance Date that would have occurred but for such Termination of Service;
+and (b) any RSUs (as well as the related Dividend Equivalent Rights) that are not vested after giving effect to the foregoing clause (a) shall
+terminate on the Severance Date. Further, in the event the Participant’s Termination of Service is due to the Participant’s death, any unvested
+RSUs shall be fully vested as of the Severance Date, and any Dividend Equivalent Rights credited to the Participant shall be paid. If any
+unvested RSUs are terminated hereunder, such RSUs (as well as the related Dividend Equivalent Rights) shall automatically terminate and be
+canceled as of the applicable Severance Date without payment of any consideration by the Company and without any other action by the
+Participant or the Participant’s beneficiary or personal representative, as the case may be.
+9. Recoupment. Notwithstanding any other provision herein, the Award and any Shares or other amount or property that may be
+issued, delivered or paid in respect of the Award, as well as any consideration that may be received in respect of a sale or other disposition of
+any such Shares or property, shall be subject to any recoupment, “clawback” or similar provisions of Applicable Laws relevant to the Company’s
+Shares and any recoupment, “clawback” or similar policy maintained by the Company from time to time. In addition, the Company may require
+the Participant to deliver or otherwise repay to the Company the Award and any Shares or other amount or property that may be issued,
+delivered or paid in respect of the Award, as well as any consideration that may be received in respect of a sale or other disposition of any such
+Shares or property, if the Company reasonably determines that one or more of the following has occurred:
+(a) during the period of the Participant’s employment or service with the Company or any of its Subsidiaries (the
+“Employment Period”), the Participant has committed a felony (under the laws of the United States or any relevant state, or a similar crime or
+offense under the applicable laws of any relevant foreign jurisdiction);
+(b) during the Employment Period or at any time thereafter, the Participant has committed or engaged in a breach of
+confidentiality, or an unauthorized disclosure or use of inside information, customer lists, trade secrets or other confidential information of the
+Company or any of its Subsidiaries;
+(c) during the Employment Period or at any time thereafter, the Participant has committed or engaged in an act of theft,
+embezzlement or fraud, or materially breached any agreement to which the Participant is a party with the Company or any of its Subsidiaries.
+For purposes of the foregoing, the Participant expressly and explicitly authorizes the Company to issue instructions, on the Participant’s
+behalf, to any brokerage firm or third party administrator holding the Participant’s Shares and/or other amounts acquired under the Plan to re-
+convey, transfer, or otherwise return such Shares and/or other amounts to the Company. By accepting this Award, the Participant further agrees
+to comply with any request or demand for repayment by the Company in order to comply with such policies or Applicable Laws. To the extent
+that the terms of this Agreement and any Company recoupment policy conflict, the terms of the recoupment policy shall prevail. This Section 9 is
+not the Company’s exclusive remedy with respect to such matters.
+10. Adjustments Upon Specified Events. Upon the occurrence of certain events relating to the Company’s stock contemplated by
+Section 11 of the Plan (including, without limitation, an extraordinary cash dividend on such stock), the Committee shall make adjustments in
+accordance with such section in the number of RSUs then outstanding and the number and kind of securities that may be issued in respect of
+the Award. No such adjustment shall be made with respect to any ordinary cash dividend for which Dividend Equivalent Rights are credited
+pursuant to Section 5(b).
+3

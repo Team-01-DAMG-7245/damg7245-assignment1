@@ -1,0 +1,34 @@
+with the schedule set forth in the Grant Notice and Section 8(d)), without regard to the Participant’s Termination of Service, determined by
+multiplying (i) the number of RSUs eligible to vest on the applicable Vesting Date, by (ii) a fraction, the numerator of which shall be the number of
+days that have elapsed between the Award Date and the Participant’s Retirement date, and the denominator of which shall be the total number
+of days contained in the period between the Award Date and the applicable Vesting Date. For purposes of this Award Agreement, “Retirement”
+means the Participant’s Termination of Service on or after the Participant both has reached the age of sixty (60) and has completed ten (10)
+years of service with the Company, or any Subsidiary (including service with any entity acquired by the Company) as of the Severance Date, as
+determined in the sole discretion of the Committee. In the event the Participant’s Termination of Service occurs prior to the first anniversary of
+the Award Date, this Section 8(b) shall not apply, unless the Committee shall otherwise determine in its sole discretion. For purposes of this
+Section 8(b), a Termination of Service shall not include the Participant’s Termination of Service resulting from the Participant’s Disability or death
+(in which case Section 8(c) or 8(d), as applicable, will apply).
+(c) In the event of the Participant’s Termination of Service due to the Participant’s Disability, any unvested RSUs shall continue
+to be eligible to vest in full (in accordance with the schedule set forth in the Grant Notice and Section 8(d)) without regard to the Participant’s
+Termination of Service.
+(d) In the event of the Participant’s Termination of Service due to the Participant’s death, all unvested RSUs eligible to vest on
+Vesting Date(s) subsequent to the Participant’s death shall accelerate and vest immediately, and upon the Participant’s death following the
+Participant’s Termination of Service due to Disability or Retirement any RSUs that were eligible to vest in full, or pro rata in the case of
+Retirement, will be settled as soon as administratively practicable after the Participant’s death in accordance with Section 7.
+(e) If any unvested RSUs are terminated hereunder, such RSUs (as well as the related Dividend Equivalent Rights) shall
+automatically terminate and be canceled as of the applicable Severance Date without payment of any consideration by the Company and without
+any other action by the Participant or the Participant’s beneficiary or personal representative, as the case may be.
+9. Recoupment. Notwithstanding any other provision herein, the Award and any Shares or other amount or property that may be
+issued, delivered or paid in respect of the Award, as well as any consideration that may be received in respect of a sale or other disposition of
+any such Shares or property, shall be subject to any recoupment, “clawback” or similar provisions of Applicable Laws relevant to the Company’s
+Shares and any recoupment, “clawback” or similar policy maintained by the Company from time to time. In addition, the Company may require
+the Participant to deliver or otherwise repay to the Company the Award and any Shares or other amount or property that may be issued,
+delivered or paid in respect of the Award, as well as any consideration that may be received in respect of a sale or other disposition of any such
+Shares or property, if the Company reasonably determines that one or more of the following has occurred:
+(a) during the period of the Participant’s employment or service with the Company or any of its Subsidiaries (the
+“Employment Period”), the Participant has committed a felony (under the laws of the United States or any relevant state, or a similar crime or
+offense under the applicable laws of any relevant foreign jurisdiction);
+(b) during the Employment Period or at any time thereafter, the Participant has committed or engaged in a breach of
+confidentiality, or an unauthorized disclosure or use of inside information, customer lists, trade secrets or other confidential information of the
+Company or any of its Subsidiaries;
+3

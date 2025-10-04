@@ -1,0 +1,31 @@
+This policy is designed to prevent trading of securities when a person is aware of material nonpublic information.
+Trading while aware of material nonpublic information is a crime. Penalties for insider trading can include significant fines, monetary damages
+and prison time. In the United States, the Securities and Exchange Commission (the “SEC”) and the Department of Justice prioritize these
+types of cases. They dedicate significant resources and use sophisticated electronic surveillance techniques to identify illegal trading
+activities. The reason for the transaction, size of the transaction, or the amount of profit received does not have to be significant — even
+small insider trading violations may be monitored, aggressively investigated, and prosecuted. Agencies outside of the United States take a
+similar approach under local insider trading laws.
+Who is Covered by this Policy?
+This policy applies to all Apple personnel, including directors, officers, employees, independent contractors, and consultants. It also applies to
+family members who reside with you or are financially dependent on you, and any other person or entity whose transactions in securities are
+directed by you or are subject to your influence or control. This includes entities such as family trusts, partnerships and foundations. You must
+ensure that people and entities whose trading activities you directly or indirectly influence or control, or those whose trading activity would
+reasonably be perceived by others to be under your influence or control, comply with the terms of this policy.
+Insider Trading Prohibitions
+No Trading While Aware of Material Nonpublic Information. Never buy or sell Apple securities when aware of information that has not
+been publicly announced and that could have a material effect on the value of the securities. Information should be considered nonpublic for
+at least 24 hours after it has been distributed to the general public.
+No Tipping. Do not disclose (“tip”) material nonpublic information to other persons, including family members, or make any
+recommendation about whether to buy or sell Apple securities while aware of material nonpublic information.
+No Third-Party Trading or Tipping. Do not trade in the securities of another company when aware of material nonpublic information about
+that company in connection with your work at Apple. This includes trading in the stock of Apple suppliers, manufacturers, vendors or
+customers, such as cellular network carriers or other business partners. You must also not tip material nonpublic information about another
+company.
+No Trading During Restricted Trading Periods. If you are subject to a restricted trading period, you must not buy or sell Apple securities
+while trading restrictions are in effect.
+No Short Sales, Hedging or Trading in Derivatives. Short sales, transactions that hedge or offset, or are designed to hedge or offset, any
+decrease in the value of Apple securities, and transactions in derivatives of Apple securities, are prohibited at all times. This includes
+transactions involving prepaid variable forward contracts, equity swaps, collars, options, warrants, puts, calls, or similar instruments related to
+Apple securities. Additionally, members of Apple’s Board of Directors and executive officers are prohibited from pledging Apple stock as
+collateral.
+Updated September 2024 2

@@ -1,14 +1,14 @@
 {
   "document": {
     "filename": "Apple_10K_2023",
-    "conversion_timestamp": "2025-09-23T17:03:33.381771",
+    "conversion_timestamp": "2025-09-26T20:10:28.021147",
     "total_pages": 80,
     "layout_summary": {
-      "Figure": 38,
       "Table": 43,
+      "Title": 336,
       "Text": 783,
-      "List": 92,
-      "Title": 336
+      "Figure": 38,
+      "List": 92
     }
   },
   "pages": [

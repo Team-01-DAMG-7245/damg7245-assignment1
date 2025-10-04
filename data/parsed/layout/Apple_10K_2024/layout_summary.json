@@ -3,11 +3,11 @@
   "total_pages": 121,
   "total_blocks": 1706,
   "overall_block_counts": {
-    "Figure": 43,
     "Table": 45,
+    "Title": 449,
     "Text": 1058,
-    "List": 111,
-    "Title": 449
+    "Figure": 43,
+    "List": 111
   },
   "model_used": "Detectron2LayoutModel",
   "pages": [

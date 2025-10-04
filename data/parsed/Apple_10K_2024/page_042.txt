@@ -1,0 +1,40 @@
+Note 5 – Property, Plant and Equipment
+The following table shows the Company’s gross property, plant and equipment by major asset class and accumulated depreciation as of September 28, 2024
+and September 30, 2023 (in millions):
+2024 2023
+Land and buildings $ 24,690 $ 23,446
+Machinery, equipment and internal-use software 80,205 78,314
+Leasehold improvements 14,233 12,839
+Gross property, plant and equipment 119,128 114,599
+Accumulated depreciation (73,448) (70,884)
+Total property, plant and equipment, net $ 45,680 $ 43,715
+Depreciation expense on property, plant and equipment was $8.2 billion, $8.5 billion and $8.7 billion during 2024, 2023 and 2022, respectively.
+Note 6 – Consolidated Financial Statement Details
+The following tables show the Company’s consolidated financial statement details as of September 28, 2024 and September 30, 2023 (in millions):
+Other Non-Current Assets
+2024 2023
+Deferred tax assets $ 19,499 $ 17,852
+Other non-current assets 55,335 46,906
+Total other non-current assets $ 74,834 $ 64,758
+Other Current Liabilities
+2024 2023
+Income taxes payable $ 26,601 $ 8,819
+Other current liabilities 51,703 50,010
+Total other current liabilities $ 78,304 $ 58,829
+Other Non-Current Liabilities
+2024 2023
+Income taxes payable $ 9,254 $ 15,457
+Other non-current liabilities 36,634 34,391
+Total other non-current liabilities $ 45,888 $ 49,848
+Note 7 – Income Taxes
+European Commission State Aid Decision
+On August 30, 2016, the Commission announced its decision that Ireland granted state aid to the Company by providing tax opinions in 1991 and 2007
+concerning the tax allocation of profits of the Irish branches of two subsidiaries of the Company (the “State Aid Decision”). The State Aid Decision ordered Ireland
+to calculate and recover additional taxes from the Company for the period June 2003 through December 2014. Irish legislative changes, effective as of January
+2015, eliminated the application of the tax opinions from that date forward. The recovery amount was calculated to be €13.1 billion, plus interest of €1.2 billion.
+From time to time, the Company requested approval from the Irish Minister for Finance to reduce the recovery amount for certain taxes paid to other countries.
+As of September 28, 2024, the adjusted recovery amount of €12.7 billion plus interest of €1.2 billion was held in escrow and restricted from general use. The
+total balance of the escrow, including net unrealized investment gains, was €14.2 billion or $15.8 billion as of September 28, 2024, of which $2.6 billion was
+classified as cash and cash equivalents and $13.2 billion was classified as current marketable securities in the Consolidated Balance Sheet. Refer to the Cash,
+Cash Equivalents and Marketable Securities section of Note 4, “Financial Instruments” for more information.
+Apple Inc. | 2024 Form 10-K | 39

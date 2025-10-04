@@ -1,0 +1,40 @@
+The following table shows information by reportable segment for 2024, 2023 and 2022 (in millions):
+2024 2023 2022
+Americas:
+Net sales $ 167,045 $ 162,560 $ 169,658
+Operating income $ 67,656 $ 60,508 $ 62,683
+Europe:
+Net sales $ 101,328 $ 94,294 $ 95,118
+Operating income $ 41,790 $ 36,098 $ 35,233
+Greater China:
+Net sales $ 66,952 $ 72,559 $ 74,200
+Operating income $ 27,082 $ 30,328 $ 31,153
+Japan:
+Net sales $ 25,052 $ 24,257 $ 25,977
+Operating income $ 12,454 $ 11,888 $ 12,257
+Rest of Asia Pacific:
+Net sales $ 30,658 $ 29,615 $ 29,375
+Operating income $ 13,062 $ 12,066 $ 11,569
+A reconciliation of the Company’s segment operating income to the Consolidated Statements of Operations for 2024, 2023 and 2022 is as follows (in millions):
+2024 2023 2022
+Segment operating income $ 162,044 $ 150,888 $ 152,895
+Research and development expense (31,370) (29,915) (26,251)
+Other corporate expenses, net (1) (7,458) (6,672) (7,207)
+Total operating income $ 123,216 $ 114,301 $ 119,437
+(1) Includes general and administrative compensation costs, various nonrecurring charges, and other separately managed costs.
+The following tables show net sales for 2024, 2023 and 2022 and long-lived assets as of September 28, 2024 and September 30, 2023 for countries that
+individually accounted for 10% or more of the respective totals, as well as aggregate amounts for the remaining countries (in millions):
+2024 2023 2022
+Net sales:
+U.S. $ 142,196 $ 138,573 $ 147,859
+China (1) 66,952 72,559 74,200
+Other countries 181,887 172,153 172,269
+Total net sales $ 391,035 $ 383,285 $ 394,328
+2024 2023
+Long-lived assets:
+U.S. $ 35,664 $ 33,276
+China (1) 4,797 5,778
+Other countries 5,219 4,661
+Total long-lived assets $ 45,680 $ 43,715
+(1) China includes Hong Kong and Taiwan.
+Apple Inc. | 2024 Form 10-K | 47

@@ -1,0 +1,36 @@
+Note 5 – Property, Plant and Equipment
+The following table shows the Company’s gross property, plant and equipment by major asset class and accumulated depreciation as of September 30, 2023
+and September 24, 2022 (in millions):
+2023 2022
+Land and buildings $ 23,446 $ 22,126
+Machinery, equipment and internal-use software 78,314 81,060
+Leasehold improvements 12,839 11,271
+Gross property, plant and equipment 114,599 114,457
+Accumulated depreciation (70,884) (72,340)
+Total property, plant and equipment, net $ 43,715 $ 42,117
+Depreciation expense on property, plant and equipment was $8.5 billion, $8.7 billion and $9.5 billion during 2023, 2022 and 2021, respectively.
+Note 6 – Consolidated Financial Statement Details
+The following tables show the Company’s consolidated financial statement details as of September 30, 2023 and September 24, 2022 (in millions):
+Other Non-Current Assets
+2023 2022
+Deferred tax assets $ 17,852 $ 15,375
+Other non-current assets 46,906 39,053
+Total other non-current assets $ 64,758 $ 54,428
+Other Current Liabilities
+2023 2022
+Income taxes payable $ 8,819 $ 6,552
+Other current liabilities 50,010 54,293
+Total other current liabilities $ 58,829 $ 60,845
+Other Non-Current Liabilities
+2023 2022
+Long-term taxes payable $ 15,457 $ 16,657
+Other non-current liabilities 34,391 32,485
+Total other non-current liabilities $ 49,848 $ 49,142
+Other Income/(Expense), Net
+The following table shows the detail of other income/(expense), net for 2023, 2022 and 2021 (in millions):
+2023 2022 2021
+Interest and dividend income $ 3,750 $ 2,825 $ 2,843
+Interest expense (3,933) (2,931) (2,645)
+Other income/(expense), net (382) (228) 60
+Total other income/(expense), net $ (565) $ (334) $ 258
+Apple Inc. | 2023 Form 10-K | 39
