@@ -7,8 +7,9 @@ stages:
     deps:
       - src/SEC_filings.py
     outs:
-      - data/raw
-    desc: Download SEC 10-K/10-Q filings with XBRL attachments
+      - data/raw:
+          persist: true  # Don't delete existing files
+    desc: Download SEC filings
 
   extract_text:
     cmd: python src/extract_pdf_text.py
