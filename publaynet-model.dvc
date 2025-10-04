@@ -1,0 +1,6 @@
+outs:
+- md5: a43b665917e05102c59636b8a28088bd.dir
+  size: 10400
+  nfiles: 2
+  hash: md5
+  path: publaynet-model
