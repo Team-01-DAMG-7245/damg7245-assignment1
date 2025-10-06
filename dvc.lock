@@ -233,3 +233,36 @@ stages:
       md5: dd18a465f60113977f23566105fcbcf8.dir
       size: 4856925
       nfiles: 2
+  convert_formats:
+    cmd: python src/format_converter.py
+    deps:
+    - path: data/parsed/layout
+      hash: md5
+      md5: a06dbf690911633cf82007f000e96282.dir
+      size: 2167711
+      nfiles: 203
+    - path: data/parsed/tables
+      hash: md5
+      md5: 7513bbd2d9f15c8d7ae8a962a5c65428.dir
+      size: 1093208
+      nfiles: 576
+    - path: data/raw
+      hash: md5
+      md5: 8d0ca92bb47c5b6a6b0e5f6325ee53ef.dir
+      size: 21230053
+      nfiles: 4
+    - path: src/format_converter.py
+      hash: md5
+      md5: 0344c21a8a91c9bcf53ad71cd946032c
+      size: 22135
+    outs:
+    - path: data/parsed/converted
+      hash: md5
+      md5: dc71313c8e591ec232ab3318643960b0.dir
+      size: 290192
+      nfiles: 6
+    - path: reports
+      hash: md5
+      md5: e0ca4d0096c2d60393d6cde1bc2a5941.dir
+      size: 3536
+      nfiles: 2
