@@ -199,3 +199,37 @@ stages:
       md5: a06dbf690911633cf82007f000e96282.dir
       size: 2167711
       nfiles: 203
+  docling_extract@Apple_10K_2023:
+    cmd: python src/docling_basic.py --pdf data/raw/Apple_10K_2023.pdf --output data/parsed/docling/
+    deps:
+    - path: data/raw/Apple_10K_2023.pdf
+      hash: md5
+      md5: c6b92c753a33888535c3c89900467c5e
+      size: 807316
+    - path: src/docling_basic.py
+      hash: md5
+      md5: aaf3d794daaea73b6163f80a417c1b70
+      size: 9996
+    outs:
+    - path: data/parsed/docling/Apple_10K_2023/
+      hash: md5
+      md5: 4ae2bf31102d3c664499e6645e34fa97.dir
+      size: 4264221
+      nfiles: 2
+  docling_extract@Apple_10K_2024:
+    cmd: python src/docling_basic.py --pdf data/raw/Apple_10K_2024.pdf --output data/parsed/docling/
+    deps:
+    - path: data/raw/Apple_10K_2024.pdf
+      hash: md5
+      md5: 1268b276eb58d15e25c40b9e9a82f1c6
+      size: 1093835
+    - path: src/docling_basic.py
+      hash: md5
+      md5: aaf3d794daaea73b6163f80a417c1b70
+      size: 9996
+    outs:
+    - path: data/parsed/docling/Apple_10K_2024/
+      hash: md5
+      md5: dd18a465f60113977f23566105fcbcf8.dir
+      size: 4856925
+      nfiles: 2

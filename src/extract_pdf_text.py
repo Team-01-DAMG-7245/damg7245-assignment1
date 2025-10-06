@@ -3,7 +3,7 @@ import pytesseract
 from pathlib import Path
 import json
 
-def extract_pdf_pages(pdf_path, output_dir="data/parsed"):
+def extract_pdf_pages(pdf_path, output_dir="data/parsed/text/"):
     """
     Extract text from each page of a PDF and save as individual .txt files
     
@@ -109,7 +109,7 @@ def extract_pdf_pages(pdf_path, output_dir="data/parsed"):
     print(f"All pages saved to: {pdf_output_dir}")
     return pdf_output_dir, ocr_pages
 
-def process_all_pdfs(input_dir="data/raw", output_dir="data/parsed"):
+def process_all_pdfs(input_dir="data/raw", output_dir="data/parsed/text"):
     """
     Process all PDF files from raw folder and extract per-page text to parsed folder
     """
