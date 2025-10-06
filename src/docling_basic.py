@@ -197,7 +197,7 @@ def export_to_formats(document, output_dir, filename):
     if not document:
         return
     
-    output_path = Path(output_dir)
+    output_path = Path(output_dir) / filename
     output_path.mkdir(parents=True, exist_ok=True)
     
     print(f"\nExporting to: {output_path}")
@@ -267,33 +267,7 @@ def compare_with_custom_pipeline(docling_dir, custom_dir):
     for advantage in custom_advantages:
         print(f"  - {advantage}")
 
-def create_dvc_integration():
-    """Create DVC integration configuration"""
-    dvc_config = """
-# Add to dvc.yaml
-stages:
-  docling_extract:
-    cmd: python src/docling_basic.py --pdf ${item} --output data/parsed/docling/
-    foreach: 
-      - data/raw/Apple_10K_2023.pdf
-      - data/raw/Apple_10K_2024.pdf
-    deps:
-      - src/docling_basic.py
-      - ${item}
-    outs:
-      - data/parsed/docling/${item.stem}/
 
-# Add to params.yaml
-docling:
-  export_markdown: true
-  export_json: true
-  analyze_structure: true
-"""
-    
-    with open("dvc_docling_config.yaml", "w") as f:
-        f.write(dvc_config.strip())
-    
-    print("DVC integration config saved to: dvc_docling_config.yaml")
 
 def main():
     parser = argparse.ArgumentParser(description="Docling PDF Processing")
@@ -320,9 +294,6 @@ def main():
     
     # Compare with custom pipeline
     compare_with_custom_pipeline(args.output, args.compare)
-    
-    # Create DVC integration
-    create_dvc_integration()
     
     print(f"\nProcessing complete. Check outputs in: {args.output}")
 
