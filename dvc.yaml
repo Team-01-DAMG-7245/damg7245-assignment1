@@ -40,6 +40,19 @@ stages:
       - data/parsed/layout
     desc: Detect document layout using LayoutParser
 
+  docling_extract:
+    foreach: 
+      - data/raw/Apple_10K_2023.pdf
+      - data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: python src/docling_basic.py --pdf ${item} --output data/parsed/docling/
+      deps:
+        - src/docling_basic.py
+        - ${item}
+      outs:
+        - data/parsed/docling/${item.stem}/
+      desc: Advanced PDF processing with Docling
+
   convert_formats:
     cmd: python src/format_converter.py
     deps:

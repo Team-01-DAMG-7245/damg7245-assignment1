@@ -13,3 +13,132 @@ stages:
       md5: 8d0ca92bb47c5b6a6b0e5f6325ee53ef.dir
       size: 21230053
       nfiles: 4
+  extract_text:
+    cmd: python src/extract_pdf_text.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 8d0ca92bb47c5b6a6b0e5f6325ee53ef.dir
+      size: 21230053
+      nfiles: 4
+    - path: src/extract_pdf_text.py
+      hash: md5
+      md5: 8c8aaf336094233b74e70bbca58f21eb
+      size: 6539
+    outs:
+    - path: data/parsed/text/Apple_10K_2023
+      hash: md5
+      md5: 912b529f4572390818ec71dde1689bf7.dir
+      size: 270024
+      nfiles: 80
+    - path: data/parsed/text/Apple_10K_2024
+      hash: md5
+      md5: e41c45ee3a11969c1f34da617df78d58.dir
+      size: 412361
+      nfiles: 121
+  extract_tables@Apple_10K_2023:
+    cmd: python src/hybrid_tables.py --pdf data/raw/Apple_10K_2023.pdf --out data/parsed/tables/Apple_10K_2023
+    deps:
+    - path: data/raw/Apple_10K_2023.pdf
+      hash: md5
+      md5: c6b92c753a33888535c3c89900467c5e
+      size: 807316
+    - path: src/hybrid_tables.py
+      hash: md5
+      md5: d5d014998508ca02d9151585fbffab21
+      size: 1417
+    outs:
+    - path: data/parsed/tables/Apple_10K_2023/
+      hash: md5
+      md5: ff35db2fc68b118ed323e3b1d04786be.dir
+      size: 182492
+      nfiles: 74
+  extract_tables@Apple_10K_2024:
+    cmd: python src/hybrid_tables.py --pdf data/raw/Apple_10K_2024.pdf --out data/parsed/tables/Apple_10K_2024
+    deps:
+    - path: data/raw/Apple_10K_2024.pdf
+      hash: md5
+      md5: 1268b276eb58d15e25c40b9e9a82f1c6
+      size: 1093835
+    - path: src/hybrid_tables.py
+      hash: md5
+      md5: d5d014998508ca02d9151585fbffab21
+      size: 1417
+    outs:
+    - path: data/parsed/tables/Apple_10K_2024/
+      hash: md5
+      md5: fe6ffb90032984cd62c9a2d3122aaaad.dir
+      size: 187853
+      nfiles: 76
+  extract_tables_pdfplumber@Apple_10K_2024:
+    cmd: python src/extract_tables_pdfplumber.py --pdf data/raw/Apple_10K_2024.pdf
+      --out data/parsed/tables/pdfplumber/Apple_10K_2024
+    deps:
+    - path: data/raw/Apple_10K_2024.pdf
+      hash: md5
+      md5: 1268b276eb58d15e25c40b9e9a82f1c6
+      size: 1093835
+    - path: src/extract_tables_pdfplumber.py
+      hash: md5
+      md5: 8bdc665f50e35ac71a56a4e4bacdc8da
+      size: 1076
+    outs:
+    - path: data/parsed/tables/pdfplumber/Apple_10K_2024/
+      hash: md5
+      md5: baa6c4b203728956ff4967070e8db20a.dir
+      size: 36669
+      nfiles: 83
+  extract_tables_pdfplumber@Apple_10K_2023:
+    cmd: python src/extract_tables_pdfplumber.py --pdf data/raw/Apple_10K_2023.pdf
+      --out data/parsed/tables/pdfplumber/Apple_10K_2023
+    deps:
+    - path: data/raw/Apple_10K_2023.pdf
+      hash: md5
+      md5: c6b92c753a33888535c3c89900467c5e
+      size: 807316
+    - path: src/extract_tables_pdfplumber.py
+      hash: md5
+      md5: 8bdc665f50e35ac71a56a4e4bacdc8da
+      size: 1076
+    outs:
+    - path: data/parsed/tables/pdfplumber/Apple_10K_2023/
+      hash: md5
+      md5: 6ad40f97eca54c60b24b13032af06129.dir
+      size: 38009
+      nfiles: 87
+  extract_tables_camelot@Apple_10K_2023:
+    cmd: python src/extract_tables_camelot.py --pdf data/raw/Apple_10K_2023.pdf --out
+      data/parsed/tables/camelot/Apple_10K_2023
+    deps:
+    - path: data/raw/Apple_10K_2023.pdf
+      hash: md5
+      md5: c6b92c753a33888535c3c89900467c5e
+      size: 807316
+    - path: src/extract_tables_camelot.py
+      hash: md5
+      md5: db9ef3545d461600d56962942fa1f75b
+      size: 866
+    outs:
+    - path: data/parsed/tables/camelot/Apple_10K_2023/
+      hash: md5
+      md5: c3573b4c559fdb411a41324e02ec54c7.dir
+      size: 251306
+      nfiles: 102
+  extract_tables_camelot@Apple_10K_2024:
+    cmd: python src/extract_tables_camelot.py --pdf data/raw/Apple_10K_2024.pdf --out
+      data/parsed/tables/camelot/Apple_10K_2024
+    deps:
+    - path: data/raw/Apple_10K_2024.pdf
+      hash: md5
+      md5: 1268b276eb58d15e25c40b9e9a82f1c6
+      size: 1093835
+    - path: src/extract_tables_camelot.py
+      hash: md5
+      md5: db9ef3545d461600d56962942fa1f75b
+      size: 866
+    outs:
+    - path: data/parsed/tables/camelot/Apple_10K_2024/
+      hash: md5
+      md5: b54465e12338173614ee24a0c9d56340.dir
+      size: 396879
+      nfiles: 154

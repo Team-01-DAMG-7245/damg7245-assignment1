@@ -23,6 +23,11 @@ layout_detection:
   resolution: 200
   save_visualizations: false
 
+docling:
+  export_markdown: true
+  export_json: true
+  analyze_structure: true
+
 validation:
   tolerance_percent: 5.0
   min_wer_threshold: 0.4
