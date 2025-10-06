@@ -1,0 +1,35 @@
+# Parameters for DVC pipeline stages
+
+extraction:
+  ocr_resolution: 300
+  text_density_x: 2.0
+  text_density_y: 2.0
+  min_text_threshold: 50
+
+table_detection:
+  camelot_flavors:
+    - lattice
+    - stream
+  pdfplumber_strategies:
+    - lines_strict
+    - lines_relaxed
+    - text_based
+  intersection_tolerance: 5
+  quality_threshold: 0.3
+
+layout_detection:
+  model_dir: publaynet-model
+  detection_threshold: 0.5
+  resolution: 200
+  save_visualizations: false
+
+docling:
+  export_markdown: true
+  export_json: true
+  analyze_structure: true
+
+validation:
+  tolerance_percent: 5.0
+  min_wer_threshold: 0.4
+  min_table_f1: 0.4
+  ground_truth_pages: 5

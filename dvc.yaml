@@ -1,0 +1,115 @@
+# dvc.yaml
+# Data Version Control pipeline for Project LANTERN
+
+stages:
+  download:
+    cmd: python src/SEC_filings.py
+    deps:
+      - src/SEC_filings.py
+    outs:
+      - data/raw:
+          persist: true  # Don't delete existing files
+    desc: Download SEC filings
+
+  extract_text:
+    cmd: python src/extract_pdf_text.py
+    deps:
+      - src/extract_pdf_text.py
+      - data/raw
+    outs:
+      - data/parsed/text/Apple_10K_2023
+      - data/parsed/text/Apple_10K_2024
+    desc: Extract per-page text with OCR fallback
+
+  extract_tables_pdfplumber:
+    foreach:
+      Apple_10K_2023: data/raw/Apple_10K_2023.pdf
+      Apple_10K_2024: data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: python src/extract_tables_pdfplumber.py --pdf ${item} --out data/parsed/tables/pdfplumber/${key}
+      deps:
+        - src/extract_tables_pdfplumber.py
+        - ${item}
+      outs:
+        - data/parsed/tables/pdfplumber/${key}/
+
+  extract_tables_camelot:
+    foreach:
+      Apple_10K_2023: data/raw/Apple_10K_2023.pdf
+      Apple_10K_2024: data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: python src/extract_tables_camelot.py --pdf ${item} --out data/parsed/tables/camelot/${key}
+      deps:
+        - src/extract_tables_camelot.py
+        - ${item}
+      outs:
+        - data/parsed/tables/camelot/${key}/
+
+  extract_tables_hybrid:
+    foreach:
+      Apple_10K_2023: data/raw/Apple_10K_2023.pdf
+      Apple_10K_2024: data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: python src/hybrid_tables.py --pdf ${item} --out data/parsed/tables/hybrid/${key}
+      deps:
+        - src/hybrid_tables.py
+        - ${item}
+      outs:
+        - data/parsed/tables/hybrid/${key}/
+
+  layout_detection:
+    cmd: python src/layout_detection.py --raw-dir data/raw --parsed-dir data/parsed
+    deps:
+      - src/layout_detection.py
+      - data/raw
+      - publaynet-model
+    outs:
+      - data/parsed/layout
+    desc: Detect document layout using LayoutParser
+
+  docling_extract:
+    foreach:
+      Apple_10K_2023: data/raw/Apple_10K_2023.pdf
+      Apple_10K_2024: data/raw/Apple_10K_2024.pdf
+    do:
+      cmd: python src/docling_basic.py --pdf ${item} --output data/parsed/docling/
+      deps:
+        - src/docling_basic.py
+        - ${item}
+      outs:
+        - data/parsed/docling/${key}/
+
+  convert_formats:
+    cmd: python src/format_converter.py
+    deps:
+      - src/format_converter.py
+      - data/parsed/layout
+      - data/parsed/tables  # All three methods output here
+      - data/raw
+    outs:
+      - data/parsed/converted
+      - reports
+    desc: Convert to multiple formats
+
+  evaluate_quality:
+    cmd: python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023
+    deps:
+      - src/evaluation_system.py
+      - data/parsed/converted
+      - data/ground_truth
+    outs:
+      - evaluation_results
+    desc: Evaluate parsing quality against ground truth
+
+  validate_xbrl:
+    foreach:
+      2023: "2023"
+      2024: "2024"
+    do:
+      cmd: python src/xbrl_validation.py --company Apple --year ${item} --output data/xbrl_validation/${key}
+      deps:
+        - src/xbrl_validation.py
+        - data/parsed/converted
+        - data/raw
+      outs:
+        - data/xbrl_validation/${key}/

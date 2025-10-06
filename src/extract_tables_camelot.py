@@ -1,5 +1,5 @@
-
-import camelot, pathlib, argparse, json
+import camelot
+import pathlib, argparse, json
 
 def run(pdf, outdir):
     outdir = pathlib.Path(outdir); outdir.mkdir(parents=True, exist_ok=True)

@@ -215,3 +215,19 @@ pyrightconfig.json
 
 
 publaynet-model/
+
+# dvc
+# DVC - Don't commit actual data, only .dvc tracking files
+/data/raw/*
+/data/parsed/*
+/evaluation_results/*
+/data/xbrl_validation/*
+/data/xbrl/*
+
+# But DO commit .gitkeep files if you want to preserve directory structure
+!/data/**/.gitkeep
+
+# DVC internal files are already handled by DVC init
+/publaynet-model
+/reports
+/evaluation_results
