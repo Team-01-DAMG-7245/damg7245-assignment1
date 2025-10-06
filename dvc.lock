@@ -176,3 +176,26 @@ stages:
       md5: ff35db2fc68b118ed323e3b1d04786be.dir
       size: 182492
       nfiles: 74
+  layout_detection:
+    cmd: python src/layout_detection.py --raw-dir data/raw --parsed-dir data/parsed
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 8d0ca92bb47c5b6a6b0e5f6325ee53ef.dir
+      size: 21230053
+      nfiles: 4
+    - path: publaynet-model
+      hash: md5
+      md5: a43b665917e05102c59636b8a28088bd.dir
+      size: 10400
+      nfiles: 2
+    - path: src/layout_detection.py
+      hash: md5
+      md5: ae7c8f361ce97c3ed9a11443b442c009
+      size: 12442
+    outs:
+    - path: data/parsed/layout
+      hash: md5
+      md5: a06dbf690911633cf82007f000e96282.dir
+      size: 2167711
+      nfiles: 203
