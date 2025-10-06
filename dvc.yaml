@@ -102,11 +102,14 @@ stages:
     desc: Evaluate parsing quality against ground truth
 
   validate_xbrl:
-    cmd: python src/xbrl_validation.py --ticker AAPL --filing-type 10-K --year 2023
-    deps:
-      - src/xbrl_validation.py
-      - data/parsed/converted
-      - data/raw
-    outs:
-      - data/xbrl_validation
-    desc: Cross-validate with XBRL data
+    foreach:
+      2023: "2023"
+      2024: "2024"
+    do:
+      cmd: python src/xbrl_validation.py --company Apple --year ${item} --output data/xbrl_validation/${key}
+      deps:
+        - src/xbrl_validation.py
+        - data/parsed/converted
+        - data/raw
+      outs:
+        - data/xbrl_validation/${key}/

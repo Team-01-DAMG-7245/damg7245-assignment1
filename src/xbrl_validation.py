@@ -52,7 +52,7 @@ class ValidationResult:
     match: bool
     difference: float
     confidence: float
-    discrepancy_type: str  # 'exact', 'rounding', 'ocr_error', 'tagging_difference'
+    discrepancy_type: str
 
 
 class XBRLDownloader:
@@ -70,30 +70,12 @@ class XBRLDownloader:
     
     def get_company_cik(self, company_name: str) -> Optional[str]:
         """Get CIK for company name"""
-        # Apple Inc. CIK for demo
         cik_map = {
             'apple': '0000320193',
             'apple inc': '0000320193',
             'aapl': '0000320193'
         }
         return cik_map.get(company_name.lower())
-    
-    def get_filing_urls(self, cik: str, filing_type: str = "10-K", limit: int = 5) -> List[Dict]:
-        """Get recent filing URLs for a company"""
-        url = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik.zfill(10)}.json"
-        
-        try:
-            response = self.session.get(url)
-            response.raise_for_status()
-            data = response.json()
-            
-            filings = []
-            # This is a simplified approach - in practice, you'd parse the full JSON
-            return [{"cik": cik, "filing_type": filing_type, "accession_number": "demo"}]
-            
-        except Exception as e:
-            print(f"Error fetching filing URLs: {e}")
-            return []
     
     def download_xbrl_files(self, company_name: str, filing_type: str = "10-K") -> List[Path]:
         """Download XBRL files for a company's recent filing"""
@@ -102,7 +84,6 @@ class XBRLDownloader:
             print(f"CIK not found for {company_name}")
             return []
         
-        # For demo purposes, create sample XBRL data
         return self._create_sample_xbrl_files(cik)
     
     def _create_sample_xbrl_files(self, cik: str) -> List[Path]:
@@ -110,23 +91,24 @@ class XBRLDownloader:
         output_dir = Path("data/raw/xbrl")
         output_dir.mkdir(parents=True, exist_ok=True)
         
-        # Sample XBRL data based on Apple's financials
+        # Sample XBRL data based on Apple's 2023 financials
         sample_data = {
-            "us-gaap:Revenues": 394328000000,  # $394.328B
-            "us-gaap:NetIncomeLoss": 99803000000,  # $99.803B
+            "us-gaap:Revenues": 383285000000,  # $383.285B
+            "us-gaap:NetIncomeLoss": 96995000000,  # $96.995B
             "us-gaap:Assets": 352755000000,  # $352.755B
-            "us-gaap:Liabilities": 258549000000,  # $258.549B
-            "us-gaap:StockholdersEquity": 94206000000,  # $94.206B
-            "us-gaap:CashAndCashEquivalentsAtCarryingValue": 48295000000,  # $48.295B
+            "us-gaap:Liabilities": 290437000000,  # $290.437B
+            "us-gaap:StockholdersEquity": 62146000000,  # $62.146B
+            "us-gaap:CashAndCashEquivalentsAtCarryingValue": 29965000000,  # $29.965B
+            "us-gaap:GrossProfit": 169148000000,  # $169.148B
         }
         
-        # Create sample XBRL XML
         xbrl_content = self._generate_sample_xbrl_xml(sample_data)
         
         xbrl_file = output_dir / f"{cik}_sample.xbrl"
         with open(xbrl_file, 'w') as f:
             f.write(xbrl_content)
         
+        print(f"Created sample XBRL file: {xbrl_file}")
         return [xbrl_file]
     
     def _generate_sample_xbrl_xml(self, data: Dict[str, float]) -> str:
@@ -143,7 +125,7 @@ class XBRLDownloader:
       <identifier scheme="http://www.sec.gov/CIK">0000320193</identifier>
     </entity>
     <period>
-      <instant>2024-09-30</instant>
+      <instant>2023-09-30</instant>
     </period>
   </context>
   
@@ -184,7 +166,7 @@ class XBRLParser:
             # Find all financial facts
             for element in root.iter():
                 if element.tag and ':' in element.tag:
-                    namespace, tag = element.tag.split(':', 1)
+                    namespace, tag = element.tag.split('}')[-1].split(':')[-1] if '}' in element.tag else (None, element.tag.split(':')[-1])
                     
                     # Skip context and unit elements
                     if tag in ['context', 'unit', 'entity', 'period']:
@@ -219,13 +201,13 @@ class XBRLParser:
             return None
         
         try:
-            context = root.find(f".//xbrli:context[@id='{context_ref}']", self.namespaces)
-            if context is not None:
-                period = context.find('xbrli:period', self.namespaces)
-                if period is not None:
-                    instant = period.find('xbrli:instant', self.namespaces)
-                    if instant is not None:
-                        return instant.text
+            for context in root.iter():
+                if context.get('id') == context_ref:
+                    for child in context.iter():
+                        if 'instant' in child.tag:
+                            return child.text
+                        elif 'endDate' in child.tag:
+                            return child.text
         except Exception:
             pass
         
@@ -237,7 +219,7 @@ class ConceptMapper:
     
     def __init__(self):
         self.mapping_rules = self._load_mapping_rules()
-        self.similarity_threshold = 0.7
+        self.similarity_threshold = 0.6
     
     def _load_mapping_rules(self) -> Dict[str, str]:
         """Load predefined mapping rules"""
@@ -246,6 +228,7 @@ class ConceptMapper:
             'revenue': 'us-gaap:Revenues',
             'net sales': 'us-gaap:Revenues',
             'total revenue': 'us-gaap:Revenues',
+            'total net sales': 'us-gaap:Revenues',
             'sales': 'us-gaap:Revenues',
             
             # Net Income mappings
@@ -274,6 +257,10 @@ class ConceptMapper:
             'cash and cash equivalents': 'us-gaap:CashAndCashEquivalentsAtCarryingValue',
             'cash equivalents': 'us-gaap:CashAndCashEquivalentsAtCarryingValue',
             'cash': 'us-gaap:CashAndCashEquivalentsAtCarryingValue',
+            
+            # Gross profit
+            'gross profit': 'us-gaap:GrossProfit',
+            'gross margin': 'us-gaap:GrossProfit',
         }
     
     def map_label_to_concept(self, pdf_label: str) -> Tuple[Optional[str], float]:
@@ -309,7 +296,7 @@ class CrossValidator:
     """Cross-validates XBRL data with PDF-extracted tables"""
     
     def __init__(self, tolerance: float = 0.01):
-        self.tolerance = tolerance  # 1% tolerance for rounding differences
+        self.tolerance = tolerance
     
     def validate_values(self, xbrl_elements: List[XBRLElement], 
                        pdf_values: List[PDFTableValue]) -> List[ValidationResult]:
@@ -351,12 +338,12 @@ class CrossValidator:
         match = difference <= self.tolerance
         
         if match:
-            if difference < 0.001:  # < 0.1%
+            if difference < 0.001:
                 discrepancy_type = 'exact'
             else:
                 discrepancy_type = 'rounding'
         else:
-            if difference > 0.1:  # > 10%
+            if difference > 0.1:
                 discrepancy_type = 'ocr_error'
             else:
                 discrepancy_type = 'tagging_difference'
@@ -383,21 +370,28 @@ class PDFTableLoader:
         """Load all tables for a company/year and extract values"""
         values = []
         
-        # Look for CSV files in various extraction directories
-        for method in ['Hybrid', 'Camelot', 'PdfPlumber']:
+        # Look for CSV files in various extraction directories (lowercase)
+        for method in ['hybrid', 'camelot', 'pdfplumber']:
             method_dir = self.tables_dir / method
             if method_dir.exists():
-                csv_files = list(method_dir.glob(f"{company}_10K_{year}_*.csv"))
+                # Look in subdirectories for the company
+                company_dir = method_dir / f"{company}_10K_{year}"
                 
-                for csv_file in csv_files:
-                    try:
-                        df = pd.read_csv(csv_file)
-                        table_values = self._extract_values_from_table(
-                            df, csv_file.stem, method
-                        )
-                        values.extend(table_values)
-                    except Exception as e:
-                        print(f"Error loading {csv_file}: {e}")
+                if company_dir.exists():
+                    csv_files = list(company_dir.glob("*.csv"))
+                    print(f"Found {len(csv_files)} CSV files in {method}/{company}_10K_{year}")
+                    
+                    for csv_file in csv_files:
+                        try:
+                            df = pd.read_csv(csv_file)
+                            table_values = self._extract_values_from_table(
+                                df, csv_file.stem, method
+                            )
+                            values.extend(table_values)
+                        except Exception as e:
+                            print(f"Error loading {csv_file.name}: {e}")
+                else:
+                    print(f"Directory not found: {company_dir}")
         
         return values
     
@@ -407,48 +401,69 @@ class PDFTableLoader:
         values = []
         
         for row_idx, row in df.iterrows():
-            for col_idx, cell_value in enumerate(row):
+            # Use first column as label
+            label = str(row.iloc[0]) if not pd.isna(row.iloc[0]) else f"Row_{row_idx}"
+            
+            # Look for numeric values in other columns
+            for col_idx in range(1, len(row)):
+                cell_value = row.iloc[col_idx]
+                
                 if pd.isna(cell_value):
                     continue
                 
                 # Try to extract numeric value
                 numeric_value = self._extract_numeric_value(str(cell_value))
-                if numeric_value is not None:
-                    # Use the first column as label if it's not numeric
-                    label = str(row.iloc[0]) if not pd.isna(row.iloc[0]) else f"Row_{row_idx}"
-                    
+                
+                if numeric_value is not None and abs(numeric_value) > 1000000:  # Filter small numbers
                     pdf_value = PDFTableValue(
-                        label=label,
+                        label=self._clean_label(label),
                         value=numeric_value,
-                        row=row_idx,
+                        row=int(row_idx),
                         col=col_idx,
                         table_id=table_id,
-                        page=1  # Would need to extract from filename
+                        page=self._extract_page_from_filename(table_id)
                     )
                     values.append(pdf_value)
         
         return values
     
+    def _extract_page_from_filename(self, filename: str) -> int:
+        """Extract page number from filename"""
+        match = re.search(r'_p(\d+)_', filename)
+        return int(match.group(1)) if match else 1
+    
+    def _clean_label(self, label: str) -> str:
+        """Clean label text"""
+        # Remove extra whitespace and special characters
+        label = re.sub(r'\s+', ' ', label.strip())
+        return label
+    
     def _extract_numeric_value(self, text: str) -> Optional[float]:
         """Extract numeric value from text"""
         # Remove common formatting
+        original_text = text
         text = re.sub(r'[,$\s]', '', text)
-        text = re.sub(r'[()]', '-', text)  # Parentheses indicate negative
         
-        # Handle millions/billions
+        # Handle parentheses as negative
+        is_negative = '(' in original_text and ')' in original_text
+        text = text.replace('(', '').replace(')', '')
+        
+        # Handle millions/billions notation
         multiplier = 1
-        if 'million' in text.lower():
+        text_lower = original_text.lower()
+        if 'million' in text_lower or text.endswith('m'):
             multiplier = 1_000_000
-        elif 'billion' in text.lower():
+        elif 'billion' in text_lower or text.endswith('b'):
             multiplier = 1_000_000_000
-        elif 'thousand' in text.lower():
+        elif 'thousand' in text_lower or text.endswith('k'):
             multiplier = 1_000
         
         # Extract number
-        numbers = re.findall(r'-?\d+\.?\d*', text)
+        numbers = re.findall(r'\d+\.?\d*', text)
         if numbers:
             try:
-                return float(numbers[0]) * multiplier
+                value = float(numbers[0]) * multiplier
+                return -value if is_negative else value
             except ValueError:
                 pass
         
@@ -459,7 +474,7 @@ def main():
     parser = argparse.ArgumentParser(description="XBRL Cross-Validation System")
     parser.add_argument("--company", default="Apple", help="Company name")
     parser.add_argument("--year", default="2023", help="Filing year")
-    parser.add_argument("--output", default="data/validation", help="Output directory")
+    parser.add_argument("--output", default="data/xbrl_validation", help="Output directory")
     
     args = parser.parse_args()
     
@@ -489,13 +504,25 @@ def main():
     
     print(f"Found {len(all_xbrl_elements)} XBRL elements")
     
+    # Show XBRL concepts found
+    if all_xbrl_elements:
+        print("\nXBRL Concepts:")
+        for elem in all_xbrl_elements[:10]:
+            print(f"  {elem.concept}: ${elem.value:,.0f}")
+    
     # Load PDF tables
-    print("Loading PDF tables...")
+    print("\nLoading PDF tables...")
     pdf_values = table_loader.load_tables(args.company, args.year)
     print(f"Found {len(pdf_values)} PDF values")
     
+    # Show sample PDF values
+    if pdf_values:
+        print("\nSample PDF Values:")
+        for val in pdf_values[:10]:
+            print(f"  {val.label}: ${val.value:,.0f} (from {val.table_id})")
+    
     # Cross-validate
-    print("Cross-validating values...")
+    print("\nCross-validating values...")
     validation_results = validator.validate_values(all_xbrl_elements, pdf_values)
     
     # Generate report
@@ -526,19 +553,27 @@ def main():
     
     print(f"\nValidation Summary:")
     print(f"Total comparisons: {total}")
-    print(f"Matches: {matches} ({matches/total*100:.1f}%)")
-    print(f"Mismatches: {total-matches} ({(total-matches)/total*100:.1f}%)")
     
-    # Discrepancy breakdown
-    discrepancy_counts = {}
-    for result in validation_results:
-        if not result.match:
-            discrepancy_counts[result.discrepancy_type] = discrepancy_counts.get(result.discrepancy_type, 0) + 1
-    
-    if discrepancy_counts:
-        print(f"\nDiscrepancy Types:")
-        for disc_type, count in discrepancy_counts.items():
-            print(f"  {disc_type}: {count}")
+    if total > 0:
+        print(f"Matches: {matches} ({matches/total*100:.1f}%)")
+        print(f"Mismatches: {total-matches} ({(total-matches)/total*100:.1f}%)")
+        
+        # Discrepancy breakdown
+        discrepancy_counts = {}
+        for result in validation_results:
+            if not result.match:
+                discrepancy_counts[result.discrepancy_type] = discrepancy_counts.get(result.discrepancy_type, 0) + 1
+        
+        if discrepancy_counts:
+            print(f"\nDiscrepancy Types:")
+            for disc_type, count in discrepancy_counts.items():
+                print(f"  {disc_type}: {count}")
+    else:
+        print("No comparisons made")
+        print("Possible issues:")
+        print("  - PDF tables may not contain financial statement data")
+        print("  - Label matching rules may need adjustment")
+        print("  - Check table extraction quality")
     
     print(f"\nResults saved to: {results_file}")
 
