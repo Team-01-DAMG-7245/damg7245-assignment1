@@ -266,3 +266,26 @@ stages:
       md5: e0ca4d0096c2d60393d6cde1bc2a5941.dir
       size: 3536
       nfiles: 2
+  evaluate_quality:
+    cmd: python src/evaluation_system.py --action evaluate --pdf Apple_10K_2023
+    deps:
+    - path: data/ground_truth
+      hash: md5
+      md5: a48945e57d254fe636625fe7258cdfd3.dir
+      size: 7869
+      nfiles: 5
+    - path: data/parsed/converted
+      hash: md5
+      md5: dc71313c8e591ec232ab3318643960b0.dir
+      size: 290192
+      nfiles: 6
+    - path: src/evaluation_system.py
+      hash: md5
+      md5: 0cec06e71c7b166ff36fb5592b8e286e
+      size: 27959
+    outs:
+    - path: evaluation_results
+      hash: md5
+      md5: 0edd56d0b09a4da74b793bbc2555431d.dir
+      size: 3573
+      nfiles: 2

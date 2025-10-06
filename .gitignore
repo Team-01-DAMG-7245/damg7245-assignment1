@@ -230,3 +230,4 @@ publaynet-model/
 # DVC internal files are already handled by DVC init
 /publaynet-model
 /reports
+/evaluation_results
