@@ -18,9 +18,9 @@ stages:
     deps:
     - path: data/raw
       hash: md5
-      md5: 8d0ca92bb47c5b6a6b0e5f6325ee53ef.dir
-      size: 21230053
-      nfiles: 4
+      md5: c49fd9dab617c548889139040b07fd17.dir
+      size: 21231387
+      nfiles: 5
     - path: src/extract_pdf_text.py
       hash: md5
       md5: 8c8aaf336094233b74e70bbca58f21eb
@@ -276,7 +276,7 @@ stages:
       nfiles: 5
     - path: data/parsed/converted
       hash: md5
-      md5: dc71313c8e591ec232ab3318643960b0.dir
+      md5: 0917797c6e669511a029d081afa43200.dir
       size: 290192
       nfiles: 6
     - path: src/evaluation_system.py
@@ -286,7 +286,7 @@ stages:
     outs:
     - path: evaluation_results
       hash: md5
-      md5: 0edd56d0b09a4da74b793bbc2555431d.dir
+      md5: 0f93d38e884ff51d4f2e58d03df0d198.dir
       size: 3573
       nfiles: 2
   validate_xbrl:
