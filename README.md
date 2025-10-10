@@ -24,7 +24,8 @@ Comprehensive document processing pipeline for SEC EDGAR filings, specifically A
 **Links**:
 - GitHub: https://github.com/Team-01-DAMG-7245/damg7245-assignment1
 - Demo: https://youtu.be/pdaxnsWtFEM
-- Documentation: https://codelabs-preview.appspot.com/?file_id=1U1xF5oAFuT8DK0EQjOYFJxlDfXBcOCj1FJ1kPFaD-lA
+- Documentation: https://docs.google.com/document/d/1IFZfiqRGc0BlpBJSmeF0G1SxeHYczArDDNNhFX68aD8/edit?tab=t.0
+- Codelab for documentation: https://codelabs-preview.appspot.com/?file_id=1U1xF5oAFuT8DK0EQjOYFJxlDfXBcOCj1FJ1kPFaD-lA
   
 ## Directory Structure
 ```
